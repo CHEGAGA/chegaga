@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Prevent indexing of backend form processor
+Disallow: /contact.php
+
+# Sitemap location
 Sitemap: https://ergchegagadesert.com/sitemap.xml
