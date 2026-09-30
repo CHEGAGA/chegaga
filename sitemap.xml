@@ -2,71 +2,71 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://ergchegagadesert.com/</loc>
+    <loc>https://ergchegaga.com/</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://ergchegagadesert.com/images/hero-dunes.jpg</image:loc>
+      <image:loc>https://ergchegaga.com/images/hero-dunes.jpg</image:loc>
       <image:title>Dunes géantes d'Erg Chegaga Sahara Maroc</image:title>
       <image:caption>Immenses dunes de sable doré d'Erg Chegaga au coucher du soleil</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://ergchegagadesert.com/images/hero-caravan-dunes.jpg</image:loc>
+      <image:loc>https://ergchegaga.com/images/hero-caravan-dunes.jpg</image:loc>
       <image:title>Caravane de dromadaires Erg Chegaga</image:title>
       <image:caption>Méharée et caravane traditionnelle dans le désert d'Erg Chegaga</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://ergchegagadesert.com/tours.html</loc>
+    <loc>https://ergchegaga.com/tours.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://ergchegagadesert.com/images/tour-4x4-expedition.jpg</image:loc>
+      <image:loc>https://ergchegaga.com/images/tour-4x4-expedition.jpg</image:loc>
       <image:title>Circuits et expéditions 4x4 désert Erg Chegaga</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://ergchegagadesert.com/camp.html</loc>
+    <loc>https://ergchegaga.com/camp.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://ergchegagadesert.com/images/slider-milkyway-camp.jpg</image:loc>
+      <image:loc>https://ergchegaga.com/images/slider-milkyway-camp.jpg</image:loc>
       <image:title>Bivouac de luxe Erg Chegaga sous la Voie Lactée</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://ergchegagadesert.com/activities.html</loc>
+    <loc>https://ergchegaga.com/activities.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://ergchegagadesert.com/images/activity-quad-rider.jpg</image:loc>
+      <image:loc>https://ergchegaga.com/images/activity-quad-rider.jpg</image:loc>
       <image:title>Safari Quad et buggy dans les dunes d'Erg Chegaga</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://ergchegagadesert.com/about.html</loc>
+    <loc>https://ergchegaga.com/about.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ergchegagadesert.com/gallery.html</loc>
+    <loc>https://ergchegaga.com/gallery.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ergchegagadesert.com/blog.html</loc>
+    <loc>https://ergchegaga.com/blog.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ergchegagadesert.com/contact.html</loc>
+    <loc>https://ergchegaga.com/contact.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
