@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Réservations — Erg Chegaga Desert Tours</title>
+  <meta name="description" content="Contactez Erg Chegaga Desert Tours. Réservation directe via WhatsApp, téléphone, e-mail et points de rendez-vous à M'hamid El Ghizlane et Zagora au Maroc.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact & Réservations — Erg Chegaga Desert Tours">
+  <meta property="og:description" content="Demandez un devis sur mesure pour votre séjour dans le désert, bivouac de luxe et safari 4x4 à Erg Chegaga.">
+  <meta property="og:image" content="images/hero-dunes.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo-gold.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            desert: {
+              light: '#faf6f0',
+              sand: '#f4ebd9',
+              terracotta: '#c2410c',
+              ochre: '#b45309',
+              gold: '#f59e0b',
+              stone: '#1c1917',
+              oasis: '#10b981',
+              whatsapp: '#25D366'
+            }
+          },
+          fontFamily: {
+            sans: ['Rubik', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-desert-light text-desert-stone font-sans antialiased selection:bg-desert-terracotta selection:text-white">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 nav-transparent text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="images/logo-gold.png" alt="Logo Erg Chegaga" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        <div class="flex flex-col">
+          <span id="nav-logo-text" class="font-heading font-extrabold text-lg sm:text-xl tracking-wider uppercase text-white transition-colors">Erg Chegaga</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-desert-gold font-bold">Desert Tours</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+        <a href="index.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Accueil</a>
+        <a href="about.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">À Propos</a>
+        <a href="activities.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Activités</a>
+        <a href="tours.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Circuits</a>
+        <a href="camp.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Bivouac de Luxe</a>
+        <a href="gallery.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Galerie</a>
+        <a href="blog.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Blog</a>
+        <a href="contact.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-desert-gold">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20vous%20contacte%20depuis%20votre%20site%20internet." target="_blank" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-desert-terracotta hover:bg-desert-ochre text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all transform active:scale-95">
+          <i class="fab fa-whatsapp text-sm"></i> WhatsApp
+        </a>
+        <button id="mobile-menu-open-btn" class="lg:hidden p-2 rounded-xl bg-black/30 hover:bg-black/50 text-white transition-colors" aria-label="Ouvrir le menu">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md lg:hidden transition-transform duration-300 translate-x-full pointer-events-none">
+    <div class="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-desert-light h-full shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-desert-sand mb-6">
+          <span class="font-heading font-extrabold text-sm uppercase text-desert-terracotta">Erg Chegaga</span>
+          <button id="mobile-menu-close-btn" class="p-2 rounded-full hover:bg-desert-sand text-desert-stone" aria-label="Fermer le menu">
+            <i class="fas fa-times text-lg"></i>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-4 font-heading font-bold text-sm uppercase tracking-wider text-desert-stone">
+          <a href="index.html" class="drawer-link py-2 border-b border-desert-sand/50">Accueil</a>
+          <a href="about.html" class="drawer-link py-2 border-b border-desert-sand/50">À Propos</a>
+          <a href="activities.html" class="drawer-link py-2 border-b border-desert-sand/50">Activités Désert</a>
+          <a href="tours.html" class="drawer-link py-2 border-b border-desert-sand/50">Circuits & Packages</a>
+          <a href="camp.html" class="drawer-link py-2 border-b border-desert-sand/50">Bivouac de Luxe</a>
+          <a href="gallery.html" class="drawer-link py-2 border-b border-desert-sand/50">Galerie Photos</a>
+          <a href="blog.html" class="drawer-link py-2 border-b border-desert-sand/50">Blog</a>
+          <a href="contact.html" class="drawer-link py-2 text-desert-terracotta">Contactez-nous</a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-desert-sand">
+        <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20un%20circuit%20%C3%A0%20Erg%20Chegaga." target="_blank" class="w-full py-3 bg-desert-terracotta text-white font-bold text-xs uppercase tracking-wider rounded-xl text-center block shadow">
+          <i class="fab fa-whatsapp mr-1"></i> Réservation WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- INNER HERO BANNER -->
+  <section class="relative pt-40 pb-24 bg-desert-stone text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="images/hero-dunes.jpg" alt="Contact Désert Maroc" class="w-full h-full object-cover opacity-35">
+      <div class="absolute inset-0 bg-gradient-to-t from-desert-stone via-desert-stone/70 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span class="text-xs font-heading font-extrabold uppercase tracking-[0.3em] text-desert-gold inline-block">Conciergerie Saharienne 24h/7j</span>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold tracking-tight">Contact & Réservations</h1>
+      <p class="text-sm sm:text-base text-white/80 max-w-2xl mx-auto font-light leading-relaxed">
+        Nous sommes à votre entière écoute pour répondre à vos questions, personnaliser votre circuit et vous guider jusqu'aux dunes d'Erg Chegaga.
+      </p>
+      <div class="flex items-center justify-center gap-2 text-xs text-white/60 pt-2">
+        <a href="index.html" class="hover:text-white transition-colors">Accueil</a>
+        <span>/</span>
+        <span class="text-desert-gold font-semibold">Contact</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CONTENT -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Contact Cards (5 cols) -->
+      <div class="lg:col-span-5 space-y-6">
+        <div class="p-8 bg-desert-stone text-white rounded-3xl space-y-6 shadow-xl relative overflow-hidden">
+          <div>
+            <h3 class="font-heading font-bold text-2xl text-white mb-2">Erg Chegaga Desert Tours</h3>
+            <p class="text-xs text-white/70 leading-relaxed">
+              Agence nomade locale et familiale basée à M'hamid El Ghizlane et Zagora. Nous organisons également des transferts privés en 4x4 depuis Marrakech, Ouarzazate et Agadir.
+            </p>
+          </div>
+
+          <div class="space-y-5 text-xs">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-desert-gold shrink-0">
+                <i class="fab fa-whatsapp text-lg"></i>
+              </div>
+              <div>
+                <span class="text-white/60 block text-[11px] uppercase tracking-wider font-semibold">WhatsApp (Réponse Immédiate)</span>
+                <a href="https://wa.me/212699374176" target="_blank" class="text-sm font-bold text-white hover:text-desert-gold transition-colors">+212 699 374 176</a>
+                <span class="text-[10px] text-white/50 block">Échangez directement avec notre guide berbère à tout moment</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-desert-gold shrink-0">
+                <i class="fas fa-envelope text-lg"></i>
+              </div>
+              <div>
+                <span class="text-white/60 block text-[11px] uppercase tracking-wider font-semibold">E-mail Direct</span>
+                <a href="mailto:ergchegagadesert19@gmail.com" class="text-sm font-bold text-white hover:text-desert-gold transition-colors">ergchegagadesert19@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-desert-gold shrink-0">
+                <i class="fas fa-map-marked-alt text-lg"></i>
+              </div>
+              <div>
+                <span class="text-white/60 block text-[11px] uppercase tracking-wider font-semibold">Bases de Rendez-vous</span>
+                <p class="text-white font-medium">M'hamid El Ghizlane / Zagora, Drâa-Tafilalet, Maroc</p>
+                <span class="text-[10px] text-white/50 block">Parking sécurisé gratuit disponible pour votre véhicule</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/10">
+            <a href="https://wa.me/212699374176" target="_blank" class="w-full py-3.5 bg-desert-whatsapp hover:bg-green-600 text-white font-bold text-xs uppercase tracking-wider rounded-xl text-center shadow transition-colors flex items-center justify-center gap-2">
+              <i class="fab fa-whatsapp text-base"></i> Ouvrir la Discussion WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="p-6 bg-white rounded-3xl border border-desert-sand/60 shadow-sm space-y-2">
+          <h5 class="text-xs font-bold text-desert-stone uppercase tracking-wider">Comment nous rejoindre</h5>
+          <p class="text-xs text-desert-stone/75 leading-relaxed">
+            Si vous voyagez avec votre propre véhicule, nous vous donnons rendez-vous à notre base de M'hamid El Ghizlane ou Zagora. Votre voiture restera stationnée dans notre parking privé sécurisé pendant que vous montez à bord de nos 4x4 vers les dunes. Nous assurons aussi votre prise en charge directe à votre riad à Marrakech.
+          </p>
+        </div>
+      </div>
+
+      <!-- Booking Form (7 cols) -->
+      <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl shadow-xl border border-desert-sand/60">
+        <h3 class="font-heading font-bold text-2xl text-desert-stone mb-2">Envoyer une Demande</h3>
+        <p class="text-xs text-desert-stone/70 mb-6">Indiquez vos souhaits de voyage. Cela prépare instantanément un message WhatsApp détaillé avec réponse sous quelques minutes !</p>
+
+        <form id="desert-booking-form" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-desert-stone/70 mb-1">Nom Complet *</label>
+              <input type="text" id="booking-name" required placeholder="Votre nom et prénom" class="w-full text-xs font-medium text-desert-stone bg-desert-light py-3 px-4 rounded-xl border border-desert-sand focus:outline-none focus:border-desert-terracotta">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-desert-stone/70 mb-1">Adresse E-mail *</label>
+              <input type="email" id="booking-email" required placeholder="votre@email.com" class="w-full text-xs font-medium text-desert-stone bg-desert-light py-3 px-4 rounded-xl border border-desert-sand focus:outline-none focus:border-desert-terracotta">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-desert-stone/70 mb-1">Téléphone / WhatsApp</label>
+              <input type="tel" id="booking-phone" placeholder="+33 6 12 34 56 78" class="w-full text-xs font-medium text-desert-stone bg-desert-light py-3 px-4 rounded-xl border border-desert-sand focus:outline-none focus:border-desert-terracotta">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-desert-stone/70 mb-1">Circuit Choisi</label>
+              <select id="booking-tour" class="w-full text-xs font-medium text-desert-stone bg-desert-light py-3 px-4 rounded-xl border border-desert-sand focus:outline-none focus:border-desert-terracotta">
+                <option value="2 Jours / 1 Nuit Bivouac Magique Erg Chegaga">2 Jours / 1 Nuit Bivouac Magique Erg Chegaga</option>
+                <option value="3 Jours / 2 Nuits Grande Expédition Sahara & Lac Iriki">3 Jours / 2 Nuits Grande Expédition Sahara & Lac Iriki</option>
+                <option value="3 Jours Circuit Marrakech vers Erg Chegaga">3 Jours Circuit Marrakech vers Erg Chegaga</option>
+                <option value="1 Journée Raid Safari 4x4 Hors-Piste">1 Journée Raid Safari 4x4 Hors-Piste</option>
+                <option value="Expédition Privée Sur Mesure">Expédition Privée Sur Mesure</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-desert-stone/70 mb-1">Date Souhaitée</label>
+              <input type="date" id="booking-date" class="w-full text-xs font-medium text-desert-stone bg-desert-light py-3 px-4 rounded-xl border border-desert-sand focus:outline-none focus:border-desert-terracotta">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-desert-stone/70 mb-1">Nombre de Voyageurs</label>
+              <select id="booking-guests" class="w-full text-xs font-medium text-desert-stone bg-desert-light py-3 px-4 rounded-xl border border-desert-sand focus:outline-none focus:border-desert-terracotta">
+                <option value="1 Voyageur (Solo)">1 Voyageur (Solo)</option>
+                <option value="2 Personnes (Couple)" selected>2 Personnes (Couple)</option>
+                <option value="3 - 4 Personnes (Famille / Amis)">3 - 4 Personnes (Famille / Amis)</option>
+                <option value="5+ Personnes (Groupe Privé)">5+ Personnes (Groupe Privé)</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-desert-stone/70 mb-1">Demandes Particulières / Questions</label>
+            <textarea id="booking-notes" rows="4" placeholder="Précisez vos besoins : prise en charge à Marrakech, régime alimentaire particulier, envie de faire du quad..." class="w-full text-xs font-medium text-desert-stone bg-desert-light py-3 px-4 rounded-xl border border-desert-sand focus:outline-none focus:border-desert-terracotta"></textarea>
+          </div>
+
+          <div id="booking-feedback" class="hidden p-3 bg-green-50 border border-green-200 text-green-700 text-xs rounded-xl">
+            <i class="fas fa-check-circle mr-1"></i> Ouverture de WhatsApp avec votre demande... Nous vous répondrons dans les plus brefs délais !
+          </div>
+
+          <button type="submit" class="w-full py-4 bg-desert-terracotta hover:bg-desert-ochre text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all transform active:scale-95 flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-base"></i> Envoyer ma Demande via WhatsApp
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-desert-stone text-white/80 pt-16 pb-8 border-t border-desert-terracotta/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/60 gap-4">
+      <p>&copy; 2026 Erg Chegaga Desert Tours. Tous droits réservés.</p>
+      <div class="flex gap-4">
+        <a href="index.html" class="hover:text-white">Accueil</a>
+        <a href="about.html" class="hover:text-white">À Propos</a>
+        <a href="activities.html" class="hover:text-white">Activités</a>
+        <a href="tours.html" class="hover:text-white">Circuits</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

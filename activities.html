@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activités & Aventures dans le Désert — Erg Chegaga Tours</title>
+  <meta name="description" content="Découvrez les meilleures activités sahariennes à Erg Chegaga : balade à dos de dromadaire, safari 4x4, quad dans les dunes, sandboarding sur 300m et astronomie sous la voie lactée.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Activités & Aventures dans le Désert — Erg Chegaga Tours">
+  <meta property="og:description" content="Vivez des balades à dromadaire, raids quad, safaris 4x4 et sandboarding sur les plus hautes dunes du Maroc.">
+  <meta property="og:image" content="images/hero-dunes.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo-gold.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            desert: {
+              light: '#faf6f0',
+              sand: '#f4ebd9',
+              terracotta: '#c2410c',
+              ochre: '#b45309',
+              gold: '#f59e0b',
+              stone: '#1c1917',
+              oasis: '#10b981',
+              whatsapp: '#25D366'
+            }
+          },
+          fontFamily: {
+            sans: ['Rubik', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-desert-light text-desert-stone font-sans antialiased selection:bg-desert-terracotta selection:text-white">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 nav-transparent text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="images/logo-gold.png" alt="Logo Erg Chegaga" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        <div class="flex flex-col">
+          <span id="nav-logo-text" class="font-heading font-extrabold text-lg sm:text-xl tracking-wider uppercase text-white transition-colors">Erg Chegaga</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-desert-gold font-bold">Desert Tours</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+        <a href="index.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Accueil</a>
+        <a href="about.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">À Propos</a>
+        <a href="activities.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-desert-gold">Activités</a>
+        <a href="tours.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Circuits</a>
+        <a href="camp.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Bivouac de Luxe</a>
+        <a href="gallery.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Galerie</a>
+        <a href="blog.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Blog</a>
+        <a href="contact.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20des%20activit%C3%A9s%20%C3%A0%20Erg%20Chegaga." target="_blank" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-desert-terracotta hover:bg-desert-ochre text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all transform active:scale-95">
+          <i class="fab fa-whatsapp text-sm"></i> Réserver
+        </a>
+        <button id="mobile-menu-open-btn" class="lg:hidden p-2 rounded-xl bg-black/30 hover:bg-black/50 text-white transition-colors" aria-label="Ouvrir le menu">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md lg:hidden transition-transform duration-300 translate-x-full pointer-events-none">
+    <div class="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-desert-light h-full shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-desert-sand mb-6">
+          <span class="font-heading font-extrabold text-sm uppercase text-desert-terracotta">Erg Chegaga</span>
+          <button id="mobile-menu-close-btn" class="p-2 rounded-full hover:bg-desert-sand text-desert-stone" aria-label="Fermer le menu">
+            <i class="fas fa-times text-lg"></i>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-4 font-heading font-bold text-sm uppercase tracking-wider text-desert-stone">
+          <a href="index.html" class="drawer-link py-2 border-b border-desert-sand/50">Accueil</a>
+          <a href="about.html" class="drawer-link py-2 border-b border-desert-sand/50">À Propos</a>
+          <a href="activities.html" class="drawer-link py-2 border-b border-desert-sand/50 text-desert-terracotta">Activités Désert</a>
+          <a href="tours.html" class="drawer-link py-2 border-b border-desert-sand/50">Circuits & Packages</a>
+          <a href="camp.html" class="drawer-link py-2 border-b border-desert-sand/50">Bivouac de Luxe</a>
+          <a href="gallery.html" class="drawer-link py-2 border-b border-desert-sand/50">Galerie Photos</a>
+          <a href="blog.html" class="drawer-link py-2 border-b border-desert-sand/50">Blog</a>
+          <a href="contact.html" class="drawer-link py-2">Contactez-nous</a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-desert-sand">
+        <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20des%20activit%C3%A9s%20%C3%A0%20Erg%20Chegaga." target="_blank" class="w-full py-3 bg-desert-terracotta text-white font-bold text-xs uppercase tracking-wider rounded-xl text-center block shadow">
+          <i class="fab fa-whatsapp mr-1"></i> Réservation WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- INNER HERO BANNER -->
+  <section class="relative pt-40 pb-24 bg-desert-stone text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="images/slider-desert-jump.jpg" alt="Activités Désert Erg Chegaga" class="w-full h-full object-cover opacity-35">
+      <div class="absolute inset-0 bg-gradient-to-t from-desert-stone via-desert-stone/70 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span class="text-xs font-heading font-extrabold uppercase tracking-[0.3em] text-desert-gold inline-block">Aventures & Excursions Sahariennes</span>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold tracking-tight">Activités dans le Désert</h1>
+      <p class="text-sm sm:text-base text-white/80 max-w-2xl mx-auto font-light leading-relaxed">
+        Des paisibles méharées au coucher du soleil jusqu'au pilotage exaltant de quad et à la glisse en sandboard sur les plus hautes dunes naturelles du Maroc.
+      </p>
+      <div class="flex items-center justify-center gap-2 text-xs text-white/60 pt-2">
+        <a href="index.html" class="hover:text-white transition-colors">Accueil</a>
+        <span>/</span>
+        <span class="text-desert-gold font-semibold">Activités</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVITIES GRID -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Camel -->
+      <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-desert-sand/60 hover-card flex flex-col">
+        <div class="h-64 relative overflow-hidden">
+          <img src="images/trek-caravan-dunes.jpg" alt="Balade dromadaire" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-desert-stone/85 text-desert-gold text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Le Plus Authentique</span>
+          <span class="absolute bottom-4 right-4 bg-white/95 text-desert-terracotta text-xs font-extrabold px-3 py-1 rounded-lg shadow">Dès 25 €</span>
+        </div>
+        <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between space-y-4">
+          <div>
+            <h3 class="font-heading font-bold text-xl text-desert-stone mb-2">Balade à dos de dromadaire (Coucher & Lever de soleil)</h3>
+            <p class="text-xs text-desert-stone/75 leading-relaxed mb-4">
+              Avancez au rythme apaisant des dromadaires alors que le soleil couchant transforme le désert en nuances pourpres et dorées. Accompagné par nos chameliers locaux avec thé traditionnel au sommet des dunes.
+            </p>
+            <ul class="text-xs text-desert-stone/85 space-y-1.5 border-t border-desert-sand/50 pt-3">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Chèche nomade traditionnel offert</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Durée : 1h30 à 2 heures</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Idéal pour les familles et tous les âges</li>
+            </ul>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-desert-sand/60">
+            <button class="activity-quick-view-btn flex-1 py-3 bg-desert-sand/30 hover:bg-desert-sand text-desert-stone font-bold text-xs uppercase tracking-wider rounded-xl transition-colors" data-act-id="camel">
+              Aperçu Rapide
+            </button>
+            <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20la%20balade%20en%20dromadaire%20%C3%A0%20Erg%20Chegaga." target="_blank" class="p-3 bg-desert-terracotta hover:bg-desert-ochre text-white rounded-xl transition-colors" title="Réserver sur WhatsApp">
+              <i class="fab fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4x4 Safari -->
+      <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-desert-sand/60 hover-card flex flex-col">
+        <div class="h-64 relative overflow-hidden">
+          <img src="images/tour-lake-iriqui.jpg" alt="Safari 4x4 désert" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-desert-stone/85 text-desert-gold text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Adrénaline & Grands Espaces</span>
+          <span class="absolute bottom-4 right-4 bg-white/95 text-desert-terracotta text-xs font-extrabold px-3 py-1 rounded-lg shadow">Dès 85 €</span>
+        </div>
+        <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between space-y-4">
+          <div>
+            <h3 class="font-heading font-bold text-xl text-desert-stone mb-2">Safari 4x4 Hors-Piste & Dunes Géantes</h3>
+            <p class="text-xs text-desert-stone/75 leading-relaxed mb-4">
+              Traversez l'immense lac asséché d'Iriki, les pistes mythiques de l'ancien rallye Paris-Dakar et les crêtes vertigineuses de dunes en Toyota 4x4 climatisé avec chauffeur expert.
+            </p>
+            <ul class="text-xs text-desert-stone/85 space-y-1.5 border-t border-desert-sand/50 pt-3">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Chauffeur-guide saharien expérimenté</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Visite des gisements de fossiles préhistoriques</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Formule demi-journée ou journée complète</li>
+            </ul>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-desert-sand/60">
+            <button class="activity-quick-view-btn flex-1 py-3 bg-desert-sand/30 hover:bg-desert-sand text-desert-stone font-bold text-xs uppercase tracking-wider rounded-xl transition-colors" data-act-id="safari4x4">
+              Aperçu Rapide
+            </button>
+            <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20un%20Safari%204x4%20%C3%A0%20Erg%20Chegaga." target="_blank" class="p-3 bg-desert-terracotta hover:bg-desert-ochre text-white rounded-xl transition-colors" title="Réserver sur WhatsApp">
+              <i class="fab fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quad Biking -->
+      <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-desert-sand/60 hover-card flex flex-col">
+        <div class="h-64 relative overflow-hidden">
+          <img src="images/activity-quad-rider.jpg" alt="Quad dans les dunes" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-desert-stone/85 text-desert-gold text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Aventure & Sensations</span>
+          <span class="absolute bottom-4 right-4 bg-white/95 text-desert-terracotta text-xs font-extrabold px-3 py-1 rounded-lg shadow">Dès 50 €</span>
+        </div>
+        <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between space-y-4">
+          <div>
+            <h3 class="font-heading font-bold text-xl text-desert-stone mb-2">Expédition Quad & Buggy dans les Dunes</h3>
+            <p class="text-xs text-desert-stone/75 leading-relaxed mb-4">
+              Pilotez des quads puissants sur les crêtes de sable d'Erg Chegaga. Initiation préalable, casques modernes et encadrement par un guide professionnel pour tous niveaux.
+            </p>
+            <ul class="text-xs text-desert-stone/85 space-y-1.5 border-t border-desert-sand/50 pt-3">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Véhicules Yamaha & Polaris de pointe</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Équipement de sécurité complet & briefing</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Sessions de 1 à 3 heures disponibles</li>
+            </ul>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-desert-sand/60">
+            <button class="activity-quick-view-btn flex-1 py-3 bg-desert-sand/30 hover:bg-desert-sand text-desert-stone font-bold text-xs uppercase tracking-wider rounded-xl transition-colors" data-act-id="quad">
+              Aperçu Rapide
+            </button>
+            <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20une%20session%20Quad%20%C3%A0%20Erg%20Chegaga." target="_blank" class="p-3 bg-desert-terracotta hover:bg-desert-ochre text-white rounded-xl transition-colors" title="Réserver sur WhatsApp">
+              <i class="fab fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sandboarding -->
+      <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-desert-sand/60 hover-card flex flex-col">
+        <div class="h-64 relative overflow-hidden">
+          <img src="images/sandboarding-dunes.jpg" alt="Sandboarding" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-desert-stone/85 text-desert-gold text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Plaisir & Glisse Pure</span>
+          <span class="absolute bottom-4 right-4 bg-white/95 text-desert-terracotta text-xs font-extrabold px-3 py-1 rounded-lg shadow">Inclus avec le Camp</span>
+        </div>
+        <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between space-y-4">
+          <div>
+            <h3 class="font-heading font-bold text-xl text-desert-stone mb-2">Sandboarding sur Dunes Géantes (300m)</h3>
+            <p class="text-xs text-desert-stone/75 leading-relaxed mb-4">
+              Dévalez les plus grandes pentes sablonneuses du Maroc sur des planches spécialement fartées. Une activité exaltante pour adultes et enfants au départ de votre tente.
+            </p>
+            <ul class="text-xs text-desert-stone/85 space-y-1.5 border-t border-desert-sand/50 pt-3">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Planches adaptées fournies gracieusement</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Utilisation illimitée durant votre séjour</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Clichés et vidéos d'action spectaculaires</li>
+            </ul>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-desert-sand/60">
+            <button class="activity-quick-view-btn flex-1 py-3 bg-desert-sand/30 hover:bg-desert-sand text-desert-stone font-bold text-xs uppercase tracking-wider rounded-xl transition-colors" data-act-id="sandboarding">
+              Aperçu Rapide
+            </button>
+            <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20veux%20en%20savoir%20plus%20sur%20le%20sandboarding%20%C3%A0%20Erg%20Chegaga." target="_blank" class="p-3 bg-desert-terracotta hover:bg-desert-ochre text-white rounded-xl transition-colors" title="Réserver sur WhatsApp">
+              <i class="fab fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stargazing -->
+      <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-desert-sand/60 hover-card flex flex-col">
+        <div class="h-64 relative overflow-hidden">
+          <img src="images/stargazing-night.jpg" alt="Astronomie désert" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-desert-stone/85 text-desert-gold text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Ciel Pur Bortle 1</span>
+          <span class="absolute bottom-4 right-4 bg-white/95 text-desert-terracotta text-xs font-extrabold px-3 py-1 rounded-lg shadow">Inclus avec le Camp</span>
+        </div>
+        <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between space-y-4">
+          <div>
+            <h3 class="font-heading font-bold text-xl text-desert-stone mb-2">Astronomie & Voie Lactée sous les Étoiles</h3>
+            <p class="text-xs text-desert-stone/75 leading-relaxed mb-4">
+              Sans aucune lumière de ville à plus de 100 km à la ronde, Erg Chegaga offre un ciel nocturne d'une pureté rare où la Voie Lactée brille à l'œil nu avec éclat.
+            </p>
+            <ul class="text-xs text-desert-stone/85 space-y-1.5 border-t border-desert-sand/50 pt-3">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Zéro pollution lumineuse artificielle</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Lecture des constellations par les guides nomades</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Cadre magique pour l'astrophotographie</li>
+            </ul>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-desert-sand/60">
+            <button class="activity-quick-view-btn flex-1 py-3 bg-desert-sand/30 hover:bg-desert-sand text-desert-stone font-bold text-xs uppercase tracking-wider rounded-xl transition-colors" data-act-id="stargazing">
+              Aperçu Rapide
+            </button>
+            <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20suis%20int%C3%A9ress%C3%A9%20par%20l'observation%20des%20%C3%A9toiles%20%C3%A0%20Erg%20Chegaga." target="_blank" class="p-3 bg-desert-terracotta hover:bg-desert-ochre text-white rounded-xl transition-colors" title="Réserver sur WhatsApp">
+              <i class="fab fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Campfire Music -->
+      <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-desert-sand/60 hover-card flex flex-col">
+        <div class="h-64 relative overflow-hidden">
+          <img src="images/trek-campfire-night.jpg" alt="Soirée feu de camp nomade" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-desert-stone/85 text-desert-gold text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Âme Culturelle Saharienne</span>
+          <span class="absolute bottom-4 right-4 bg-white/95 text-desert-terracotta text-xs font-extrabold px-3 py-1 rounded-lg shadow">Inclus avec le Camp</span>
+        </div>
+        <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between space-y-4">
+          <div>
+            <h3 class="font-heading font-bold text-xl text-desert-stone mb-2">Soirée Feu de Camp & Musique Nomade Live</h3>
+            <p class="text-xs text-desert-stone/75 leading-relaxed mb-4">
+              Rassemblez-vous autour des braises après le dîner. Laissez-vous transporter par les percussions Gnawa enivrantes, les chants nomades et le partage du thé à la menthe.
+            </p>
+            <ul class="text-xs text-desert-stone/85 space-y-1.5 border-t border-desert-sand/50 pt-3">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Concert live de percussions et chants sahariens</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Participation interactive aux rythmes berbères</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-desert-terracotta"></i> Cérémonie traditionnelle du thé marocain</li>
+            </ul>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-desert-sand/60">
+            <button class="activity-quick-view-btn flex-1 py-3 bg-desert-sand/30 hover:bg-desert-sand text-desert-stone font-bold text-xs uppercase tracking-wider rounded-xl transition-colors" data-act-id="nomadmusic">
+              Aperçu Rapide
+            </button>
+            <a href="https://wa.me/212699374176?text=Bonjour%20!%20Parlez-moi%20de%20la%20soir%C3%A9e%20musique%20au%20feu%20de%20camp." target="_blank" class="p-3 bg-desert-terracotta hover:bg-desert-ochre text-white rounded-xl transition-colors" title="Réserver sur WhatsApp">
+              <i class="fab fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUICK VIEW MODAL (Interactive) -->
+  <div id="activity-details-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl relative animate-fade-in-up">
+      <button id="close-activity-modal-cross" class="absolute top-4 right-4 z-20 w-9 h-9 bg-black/50 hover:bg-black text-white rounded-full flex items-center justify-center transition-colors" aria-label="Fermer la modal">
+        <i class="fas fa-times text-sm"></i>
+      </button>
+
+      <div class="relative h-64 sm:h-72 overflow-hidden">
+        <img id="modal-act-image" src="" alt="" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-4 left-6 right-6">
+          <span id="modal-act-badge" class="bg-desert-terracotta text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2 inline-block">Badge</span>
+          <h3 id="modal-act-title" class="font-heading font-extrabold text-2xl sm:text-3xl text-white">Titre de l'activité</h3>
+        </div>
+      </div>
+
+      <div class="p-6 sm:p-8 space-y-4">
+        <div class="flex items-center justify-between text-xs font-bold text-desert-stone/70 border-b border-desert-sand pb-3">
+          <span><i class="far fa-clock text-desert-terracotta mr-1"></i> Durée : <strong id="modal-act-duration" class="text-desert-stone">2 Heures</strong></span>
+          <span><i class="fas fa-tag text-desert-terracotta mr-1"></i> Tarif : <strong id="modal-act-price" class="text-desert-terracotta font-extrabold">25 €</strong></span>
+        </div>
+
+        <p id="modal-act-desc" class="text-xs sm:text-sm text-desert-stone/80 leading-relaxed">
+          Description de l'activité...
+        </p>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-desert-stone/60 mb-2">Points Forts Inclus</h4>
+          <ul id="modal-act-highlights" class="text-xs text-desert-stone/85 space-y-1.5"></ul>
+        </div>
+
+        <div class="flex items-center gap-4 pt-4 border-t border-desert-sand">
+          <button id="close-activity-modal-btn" class="px-5 py-3 border border-desert-sand text-desert-stone font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-desert-sand/30 transition-colors">
+            Fermer
+          </button>
+          <a id="modal-act-whatsapp-btn" href="" target="_blank" class="flex-1 py-3 bg-desert-terracotta hover:bg-desert-ochre text-white font-bold text-xs uppercase tracking-wider rounded-xl text-center shadow-lg transition-all flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-sm"></i> Réserver sur WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-desert-stone text-white/80 pt-16 pb-8 border-t border-desert-terracotta/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/60 gap-4">
+      <p>&copy; 2026 Erg Chegaga Desert Tours. Tous droits réservés.</p>
+      <div class="flex gap-4">
+        <a href="index.html" class="hover:text-white">Accueil</a>
+        <a href="about.html" class="hover:text-white">À Propos</a>
+        <a href="tours.html" class="hover:text-white">Circuits</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

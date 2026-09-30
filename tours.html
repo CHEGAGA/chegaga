@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circuits & Packages dans le Désert — Erg Chegaga Desert Tours</title>
+  <meta name="description" content="Découvrez nos circuits et packages sur mesure pour Erg Chegaga : bivouac magique 2 jours, expédition 3 jours au Lac Iriki, et circuit départ Marrakech en 4x4 de luxe.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Circuits & Packages dans le Désert — Erg Chegaga Desert Tours">
+  <meta property="og:description" content="Expéditions sahariennes sur mesure avec bivouac de luxe, méharée et safaris 4x4 à Erg Chegaga.">
+  <meta property="og:image" content="images/hero-dunes.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo-gold.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            desert: {
+              light: '#faf6f0',
+              sand: '#f4ebd9',
+              terracotta: '#c2410c',
+              ochre: '#b45309',
+              gold: '#f59e0b',
+              stone: '#1c1917',
+              oasis: '#10b981',
+              whatsapp: '#25D366'
+            }
+          },
+          fontFamily: {
+            sans: ['Rubik', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-desert-light text-desert-stone font-sans antialiased selection:bg-desert-terracotta selection:text-white">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 nav-transparent text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="images/logo-gold.png" alt="Logo Erg Chegaga" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        <div class="flex flex-col">
+          <span id="nav-logo-text" class="font-heading font-extrabold text-lg sm:text-xl tracking-wider uppercase text-white transition-colors">Erg Chegaga</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-desert-gold font-bold">Desert Tours</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+        <a href="index.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Accueil</a>
+        <a href="about.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">À Propos</a>
+        <a href="activities.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Activités</a>
+        <a href="tours.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-desert-gold">Circuits</a>
+        <a href="camp.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Bivouac de Luxe</a>
+        <a href="gallery.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Galerie</a>
+        <a href="blog.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Blog</a>
+        <a href="contact.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20un%20circuit%20%C3%A0%20Erg%20Chegaga." target="_blank" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-desert-terracotta hover:bg-desert-ochre text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all transform active:scale-95">
+          <i class="fab fa-whatsapp text-sm"></i> Réserver
+        </a>
+        <button id="mobile-menu-open-btn" class="lg:hidden p-2 rounded-xl bg-black/30 hover:bg-black/50 text-white transition-colors" aria-label="Ouvrir le menu">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md lg:hidden transition-transform duration-300 translate-x-full pointer-events-none">
+    <div class="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-desert-light h-full shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-desert-sand mb-6">
+          <span class="font-heading font-extrabold text-sm uppercase text-desert-terracotta">Erg Chegaga</span>
+          <button id="mobile-menu-close-btn" class="p-2 rounded-full hover:bg-desert-sand text-desert-stone" aria-label="Fermer le menu">
+            <i class="fas fa-times text-lg"></i>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-4 font-heading font-bold text-sm uppercase tracking-wider text-desert-stone">
+          <a href="index.html" class="drawer-link py-2 border-b border-desert-sand/50">Accueil</a>
+          <a href="about.html" class="drawer-link py-2 border-b border-desert-sand/50">À Propos</a>
+          <a href="activities.html" class="drawer-link py-2 border-b border-desert-sand/50">Activités Désert</a>
+          <a href="tours.html" class="drawer-link py-2 border-b border-desert-sand/50 text-desert-terracotta">Circuits & Packages</a>
+          <a href="camp.html" class="drawer-link py-2 border-b border-desert-sand/50">Bivouac de Luxe</a>
+          <a href="gallery.html" class="drawer-link py-2 border-b border-desert-sand/50">Galerie Photos</a>
+          <a href="blog.html" class="drawer-link py-2 border-b border-desert-sand/50">Blog</a>
+          <a href="contact.html" class="drawer-link py-2">Contactez-nous</a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-desert-sand">
+        <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20un%20circuit%20%C3%A0%20Erg%20Chegaga." target="_blank" class="w-full py-3 bg-desert-terracotta text-white font-bold text-xs uppercase tracking-wider rounded-xl text-center block shadow">
+          <i class="fab fa-whatsapp mr-1"></i> Réservation WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- INNER HERO BANNER -->
+  <section class="relative pt-40 pb-24 bg-desert-stone text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="images/tour-lake-iriqui.jpg" alt="Circuits Sahara Maroc" class="w-full h-full object-cover opacity-35">
+      <div class="absolute inset-0 bg-gradient-to-t from-desert-stone via-desert-stone/70 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span class="text-xs font-heading font-extrabold uppercase tracking-[0.3em] text-desert-gold inline-block">Itinéraires Sahariens Sur Mesure</span>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold tracking-tight">Circuits à Erg Chegaga</h1>
+      <p class="text-sm sm:text-base text-white/80 max-w-2xl mx-auto font-light leading-relaxed">
+        Du bivouac d'une nuit féérique aux grandes expéditions de plusieurs jours traversant le lac Iriki, la vallée du Draa et les sommets du Haut Atlas.
+      </p>
+      <div class="flex items-center justify-center gap-2 text-xs text-white/60 pt-2">
+        <a href="index.html" class="hover:text-white transition-colors">Accueil</a>
+        <span>/</span>
+        <span class="text-desert-gold font-semibold">Circuits</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOURS LIST -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
+    
+    <!-- Tour 1 -->
+    <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-desert-sand/70 grid grid-cols-1 lg:grid-cols-12 gap-0">
+      <div class="lg:col-span-5 relative h-72 lg:h-auto min-h-[300px]">
+        <img src="images/slider-milkyway-camp.jpg" alt="Bivouac Magique Erg Chegaga" class="w-full h-full object-cover">
+        <span class="absolute top-4 left-4 bg-desert-gold text-desert-stone font-extrabold text-[11px] uppercase tracking-wider px-3 py-1 rounded-full shadow">
+          Coup de Cœur
+        </span>
+      </div>
+      <div class="lg:col-span-7 p-8 sm:p-10 flex flex-col justify-between space-y-6">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <span class="text-xs font-bold text-desert-terracotta uppercase tracking-wider"><i class="far fa-clock mr-1"></i> 2 Jours / 1 Nuit</span>
+            <span class="text-2xl font-heading font-extrabold text-desert-terracotta">Dès 120 € <span class="text-xs font-normal text-desert-stone/60">/ personne</span></span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-desert-stone">Le Bivouac Magique d'Erg Chegaga</h2>
+          <p class="text-xs sm:text-sm text-desert-stone/80 leading-relaxed">
+            Départ de M'hamid El Ghizlane ou Zagora en 4x4. Traversée des plateaux d'acacias, halte à l'Oasis Sacrée d'Oum Lâalag et arrivée au pied des dunes géantes d'Erg Chegaga. Méharée à dos de dromadaire pour le coucher de soleil, dîner marocain aux chandelles, concert berbère live au coin du feu et nuit en tente de luxe privée. Réveil féérique face au lever du soleil avant le retour.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-desert-stone/90 pt-2 border-t border-desert-sand">
+            <div><i class="fas fa-check text-desert-terracotta mr-1"></i> Transport 4x4 privé avec chauffeur & carburant</div>
+            <div><i class="fas fa-check text-desert-terracotta mr-1"></i> Balade dromadaire coucher & lever de soleil</div>
+            <div><i class="fas fa-check text-desert-terracotta mr-1"></i> Tente de luxe privée avec douche chaude & WC</div>
+            <div><i class="fas fa-check text-desert-terracotta mr-1"></i> Dîner gastronomique, petit-déjeuner & eau minérale</div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-desert-sand flex items-center justify-between flex-wrap gap-4">
+          <span class="text-xs text-desert-stone/60 font-medium">Départs quotidiens depuis M'hamid ou Zagora</span>
+          <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20le%20circuit%202%20Jours%20/%201%20Nuit%20Bivouac%20Magique%20Erg%20Chegaga." target="_blank" class="px-6 py-3 bg-desert-terracotta hover:bg-desert-ochre text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-colors shadow">
+            Réserver sur WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tour 2 -->
+    <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-desert-sand/70 grid grid-cols-1 lg:grid-cols-12 gap-0">
+      <div class="lg:col-span-5 relative h-72 lg:h-auto min-h-[300px]">
+        <img src="images/tour-lake-iriqui.jpg" alt="Expédition 3 Jours Lac Iriki" class="w-full h-full object-cover">
+        <span class="absolute top-4 left-4 bg-desert-terracotta text-white font-extrabold text-[11px] uppercase tracking-wider px-3 py-1 rounded-full shadow">
+          Expédition Phare
+        </span>
+      </div>
+      <div class="lg:col-span-7 p-8 sm:p-10 flex flex-col justify-between space-y-6">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <span class="text-xs font-bold text-desert-terracotta uppercase tracking-wider"><i class="far fa-clock mr-1"></i> 3 Jours / 2 Nuits</span>
+            <span class="text-2xl font-heading font-extrabold text-desert-terracotta">Dès 220 € <span class="text-xs font-normal text-desert-stone/60">/ personne</span></span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-desert-stone">Grande Expédition Sahara & Lac Iriki</h2>
+          <p class="text-xs sm:text-sm text-desert-stone/80 leading-relaxed">
+            La véritable immersion au cœur du désert profond. Déconnexion complète durant deux nuits au milieu des dunes dorées. Exploration des sites de fossiles marins millénaires, pilotage sur les anciennes pistes du Rallye Paris-Dakar et traversée du spectaculaire lit d'argile asséché du Lac Iriki vers Foum Zguid. Initiation aux traditions de survie nomades, sandboarding et sérénité absolue.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-desert-stone/90 pt-2 border-t border-desert-sand">
+            <div><i class="fas fa-check text-desert-terracotta mr-1"></i> 2 nuits en bivouac de luxe au cœur des dunes</div>
+            <div><i class="fas fa-check text-desert-terracotta mr-1"></i> Traversée complète du mythique lac Iriki</div>
+            <div><i class="fas fa-check text-desert-terracotta mr-1"></i> Recherche guidée de fossiles marins préhistoriques</div>
+            <div><i class="fas fa-check text-desert-terracotta mr-1"></i> Pension complète avec déjeuners nomades inclus</div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-desert-sand flex items-center justify-between flex-wrap gap-4">
+          <span class="text-xs text-desert-stone/60 font-medium">Départ M'hamid/Zagora, arrivée Foum Zguid/Zagora</span>
+          <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20la%20Grande%20Exp%C3%A9dition%203%20Jours%20/%202%20Nuits%20Sahara%20et%20Lac%20Iriki." target="_blank" class="px-6 py-3 bg-desert-terracotta hover:bg-desert-ochre text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-colors shadow">
+            Réserver sur WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tour 3 -->
+    <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-desert-sand/70 grid grid-cols-1 lg:grid-cols-12 gap-0">
+      <div class="lg:col-span-5 relative h-72 lg:h-auto min-h-[300px]">
+        <img src="images/tour-ait-ben-haddou.jpg" alt="Circuit Marrakech à Erg Chegaga" class="w-full h-full object-cover">
+        <span class="absolute top-4 left-4 bg-desert-stone text-white font-extrabold text-[11px] uppercase tracking-wider px-3 py-1 rounded-full shadow">
+          Départ Marrakech
+        </span>
+      </div>
+      <div class="lg:col-span-7 p-8 sm:p-10 flex flex-col justify-between space-y-6">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <span class="text-xs font-bold text-desert-terracotta uppercase tracking-wider"><i class="far fa-clock mr-1"></i> 3 Jours / 2 Nuits</span>
+            <span class="text-2xl font-heading font-extrabold text-desert-terracotta">Dès 290 € <span class="text-xs font-normal text-desert-stone/60">/ personne</span></span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-desert-stone">Circuit de Marrakech à Erg Chegaga</h2>
+          <p class="text-xs sm:text-sm text-desert-stone/80 leading-relaxed">
+            Prise en charge directe à votre hôtel ou riad à Marrakech. Traversée du Haut Atlas par le col mythique du Tizi n'Tichka (2 260 m), découverte de la célèbre Kasbah d'Aït Ben Haddou (patrimoine UNESCO), route vers Ouarzazate et la majestueuse palmeraie du Draa, puis plongée dans le Sahara sauvage d'Erg Chegaga. Retour par le lac Iriki, Foum Zguid et Taznakht, la capitale du tapis berbère.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-desert-stone/90 pt-2 border-t border-desert-sand">
+            <div><i class="fas fa-check text-desert-terracotta mr-1"></i> Prise en charge & retour à votre riad à Marrakech</div>
+            <div><i class="fas fa-check text-desert-terracotta mr-1"></i> 1 Nuit Kasbah authentique + 1 Nuit Bivouac de luxe</div>
+            <div><i class="fas fa-check text-desert-terracotta mr-1"></i> Visite guidée de la Kasbah d'Aït Ben Haddou</div>
+            <div><i class="fas fa-check text-desert-terracotta mr-1"></i> Méharée, sandboarding & dîners aux chandelles</div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-desert-sand flex items-center justify-between flex-wrap gap-4">
+          <span class="text-xs text-desert-stone/60 font-medium">Départ de Marrakech à 08h00 du matin</span>
+          <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20le%20circuit%203%20Jours%20Marrakech%20-%20Erg%20Chegaga." target="_blank" class="px-6 py-3 bg-desert-terracotta hover:bg-desert-ochre text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-colors shadow">
+            Réserver sur WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-desert-stone text-white/80 pt-16 pb-8 border-t border-desert-terracotta/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/60 gap-4">
+      <p>&copy; 2026 Erg Chegaga Desert Tours. Tous droits réservés.</p>
+      <div class="flex gap-4">
+        <a href="index.html" class="hover:text-white">Accueil</a>
+        <a href="about.html" class="hover:text-white">À Propos</a>
+        <a href="activities.html" class="hover:text-white">Activités</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

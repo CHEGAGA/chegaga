@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie Photos — Dunes Sahariennes & Bivouac d'Erg Chegaga</title>
+  <meta name="description" content="Découvrez nos photos authentiques d'Erg Chegaga : dunes dorées géantes, bivouacs de luxe, caravanes de dromadaires, safaris 4x4 et ciels étoilés du Sahara marocain.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Galerie Photos — Erg Chegaga Desert Tours">
+  <meta property="og:description" content="Immersion en images au cœur des dunes de 300 mètres et bivouacs d'Erg Chegaga.">
+  <meta property="og:image" content="images/hero-dunes.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo-gold.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            desert: {
+              light: '#faf6f0',
+              sand: '#f4ebd9',
+              terracotta: '#c2410c',
+              ochre: '#b45309',
+              gold: '#f59e0b',
+              stone: '#1c1917',
+              oasis: '#10b981',
+              whatsapp: '#25D366'
+            }
+          },
+          fontFamily: {
+            sans: ['Rubik', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-desert-light text-desert-stone font-sans antialiased selection:bg-desert-terracotta selection:text-white">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 nav-transparent text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="images/logo-gold.png" alt="Logo Erg Chegaga" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        <div class="flex flex-col">
+          <span id="nav-logo-text" class="font-heading font-extrabold text-lg sm:text-xl tracking-wider uppercase text-white transition-colors">Erg Chegaga</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-desert-gold font-bold">Desert Tours</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+        <a href="index.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Accueil</a>
+        <a href="about.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">À Propos</a>
+        <a href="activities.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Activités</a>
+        <a href="tours.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Circuits</a>
+        <a href="camp.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Bivouac de Luxe</a>
+        <a href="gallery.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-desert-gold">Galerie</a>
+        <a href="blog.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Blog</a>
+        <a href="contact.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20visiter%20Erg%20Chegaga." target="_blank" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-desert-terracotta hover:bg-desert-ochre text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all transform active:scale-95">
+          <i class="fab fa-whatsapp text-sm"></i> Réserver
+        </a>
+        <button id="mobile-menu-open-btn" class="lg:hidden p-2 rounded-xl bg-black/30 hover:bg-black/50 text-white transition-colors" aria-label="Ouvrir le menu">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md lg:hidden transition-transform duration-300 translate-x-full pointer-events-none">
+    <div class="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-desert-light h-full shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-desert-sand mb-6">
+          <span class="font-heading font-extrabold text-sm uppercase text-desert-terracotta">Erg Chegaga</span>
+          <button id="mobile-menu-close-btn" class="p-2 rounded-full hover:bg-desert-sand text-desert-stone" aria-label="Fermer le menu">
+            <i class="fas fa-times text-lg"></i>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-4 font-heading font-bold text-sm uppercase tracking-wider text-desert-stone">
+          <a href="index.html" class="drawer-link py-2 border-b border-desert-sand/50">Accueil</a>
+          <a href="about.html" class="drawer-link py-2 border-b border-desert-sand/50">À Propos</a>
+          <a href="activities.html" class="drawer-link py-2 border-b border-desert-sand/50">Activités Désert</a>
+          <a href="tours.html" class="drawer-link py-2 border-b border-desert-sand/50">Circuits & Packages</a>
+          <a href="camp.html" class="drawer-link py-2 border-b border-desert-sand/50">Bivouac de Luxe</a>
+          <a href="gallery.html" class="drawer-link py-2 border-b border-desert-sand/50 text-desert-terracotta">Galerie Photos</a>
+          <a href="blog.html" class="drawer-link py-2 border-b border-desert-sand/50">Blog</a>
+          <a href="contact.html" class="drawer-link py-2">Contactez-nous</a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-desert-sand">
+        <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20visiter%20Erg%20Chegaga." target="_blank" class="w-full py-3 bg-desert-terracotta text-white font-bold text-xs uppercase tracking-wider rounded-xl text-center block shadow">
+          <i class="fab fa-whatsapp mr-1"></i> Réservation WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- INNER HERO BANNER -->
+  <section class="relative pt-40 pb-24 bg-desert-stone text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="images/stargazing-night.jpg" alt="Galerie Erg Chegaga" class="w-full h-full object-cover opacity-35">
+      <div class="absolute inset-0 bg-gradient-to-t from-desert-stone via-desert-stone/70 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span class="text-xs font-heading font-extrabold uppercase tracking-[0.3em] text-desert-gold inline-block">Instants Sahariens</span>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold tracking-tight">Galerie Photos d'Erg Chegaga</h1>
+      <p class="text-sm sm:text-base text-white/80 max-w-2xl mx-auto font-light leading-relaxed">
+        Plongez au cœur d'images authentiques : dunes dorées, ciels étoilés scintillants, aventures en plein désert et hospitalité nomade légendaire.
+      </p>
+      <div class="flex items-center justify-center gap-2 text-xs text-white/60 pt-2">
+        <a href="index.html" class="hover:text-white transition-colors">Accueil</a>
+        <span>/</span>
+        <span class="text-desert-gold font-semibold">Galerie</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
+    
+    <!-- Filter Tabs -->
+    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+      <button class="gallery-filter-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-desert-terracotta text-white shadow-sm" data-filter="all">Toutes les Photos</button>
+      <button class="gallery-filter-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-desert-stone hover:bg-desert-sand/50 border border-desert-sand/60" data-filter="dunes">Dunes & Couchers de Soleil</button>
+      <button class="gallery-filter-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-desert-stone hover:bg-desert-sand/50 border border-desert-sand/60" data-filter="camp">Bivouac de Luxe</button>
+      <button class="gallery-filter-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-desert-stone hover:bg-desert-sand/50 border border-desert-sand/60" data-filter="activities">Aventures & 4x4</button>
+      <button class="gallery-filter-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-desert-stone hover:bg-desert-sand/50 border border-desert-sand/60" data-filter="nomads">Vie Nomade</button>
+    </div>
+
+    <!-- Gallery Grid (Loaded with photos from garoly) -->
+    <div id="gallery-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Photo 1 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="dunes" data-caption="Coucher de soleil flamboyant sur les crêtes dorées d'Erg Chegaga">
+        <img src="garoly/photo_5902144165997383478_y.jpg" alt="Coucher de soleil sur les dunes d'Erg Chegaga" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Coucher de Soleil sur les Dunes</span>
+          <span class="text-white/70 text-xs">Dunes & Couchers de Soleil</span>
+        </div>
+      </div>
+
+      <!-- Photo 2 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="camp" data-caption="Intérieur d'une suite sous tente avec tapis berbères et grand lit confortable">
+        <img src="garoly/photo_5902144165997383479_y.jpg" alt="Intérieur tente de luxe" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Suite sous Tente de Luxe</span>
+          <span class="text-white/70 text-xs">Bivouac de Luxe</span>
+        </div>
+      </div>
+
+      <!-- Photo 3 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="dunes" data-caption="Ondulations infinies de sable sculptées par le vent du Sahara">
+        <img src="garoly/photo_5902144165997383477_y.jpg" alt="Panoramas des dunes sahariennes" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Vagues de Sable Doré</span>
+          <span class="text-white/70 text-xs">Dunes & Couchers de Soleil</span>
+        </div>
+      </div>
+
+      <!-- Photo 4 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="camp" data-caption="Salle de bain privée attenante avec douche chaude et vasque artisanale">
+        <img src="garoly/photo_5902144165997383481_x.jpg" alt="Salle de bain et douche privative" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Salle de Bain Privative</span>
+          <span class="text-white/70 text-xs">Bivouac de Luxe</span>
+        </div>
+      </div>
+
+      <!-- Photo 5 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="activities" data-caption="Traversée 4x4 tout-terrain sur les pistes sahariennes">
+        <img src="garoly/photo_5902144165997383482_x.jpg" alt="Safari 4x4 désert" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Traversée 4x4 du Désert</span>
+          <span class="text-white/70 text-xs">Aventures & 4x4</span>
+        </div>
+      </div>
+
+      <!-- Photo 6 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="nomads" data-caption="Hospitalité nomade authentique et cérémonie du thé à la menthe">
+        <img src="garoly/photo_5902144165997383483_y.jpg" alt="Hospitalité nomade saharienne" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Hospitalité Nomade</span>
+          <span class="text-white/70 text-xs">Vie Nomade</span>
+        </div>
+      </div>
+
+      <!-- Photo 7 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="dunes" data-caption="Marche sur les crêtes vertigineuses culminant à 300 mètres">
+        <img src="garoly/photo_5902144165997383484_y.jpg" alt="Ascension de la grande dune" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Crête de Dune Géante</span>
+          <span class="text-white/70 text-xs">Dunes & Couchers de Soleil</span>
+        </div>
+      </div>
+
+      <!-- Photo 8 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="camp" data-caption="Dîner raffiné aux chandelles sous les tentes traditionnelles caïdales">
+        <img src="garoly/photo_5902144165997383485_y.jpg" alt="Dîner gastronomique au bivouac" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Dîner aux Chandelles</span>
+          <span class="text-white/70 text-xs">Bivouac de Luxe</span>
+        </div>
+      </div>
+
+      <!-- Photo 9 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="activities" data-caption="Caravane de dromadaires avançant paisiblement au crépuscule">
+        <img src="garoly/activity-camel.jpg" alt="Méharée en dromadaire" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Méharée au Coucher du Soleil</span>
+          <span class="text-white/70 text-xs">Aventures & 4x4</span>
+        </div>
+      </div>
+
+      <!-- Photo 10 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="activities" data-caption="Sensations fortes en quad à travers les grandes pentes de sable">
+        <img src="garoly/activity-quad.jpg" alt="Quad dans les dunes" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Expédition en Quad</span>
+          <span class="text-white/70 text-xs">Aventures & 4x4</span>
+        </div>
+      </div>
+
+      <!-- Photo 11 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="activities" data-caption="Glisse sur le sable sur les plus hautes pentes avec planche adaptée">
+        <img src="garoly/activity-sandboard.jpg" alt="Sandboarding Erg Chegaga" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Sandboarding sur Dunes</span>
+          <span class="text-white/70 text-xs">Aventures & 4x4</span>
+        </div>
+      </div>
+
+      <!-- Photo 12 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="nomads" data-caption="Veillée musicale au feu de camp avec percussions Gnawa enivrantes">
+        <img src="garoly/activity-campfire.jpg" alt="Soirée feu de camp berbère" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Veillée Tambours au Feu</span>
+          <span class="text-white/70 text-xs">Vie Nomade</span>
+        </div>
+      </div>
+
+      <!-- Photo 13 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="activities" data-caption="Méditation et yoga face au coucher de soleil sur tapis traditionnels">
+        <img src="garoly/activity-yoga.jpg" alt="Yoga et sérénité dans le désert" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Yoga & Méditation Désert</span>
+          <span class="text-white/70 text-xs">Aventures & 4x4</span>
+        </div>
+      </div>
+
+      <!-- Photo 14 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="nomads" data-caption="Apprentissage du nouage traditionnel du chèche nomade saharien">
+        <img src="garoly/blog-packing.jpg" alt="Nouage du chèche saharien" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Chèche Nomade Traditionnel</span>
+          <span class="text-white/70 text-xs">Vie Nomade</span>
+        </div>
+      </div>
+
+      <!-- Photo 15 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="camp" data-caption="Espace salon détente extérieur face aux dunes pour contempler le paysage">
+        <img src="garoly/photo_5902144165997383488_y.jpg" alt="Salon détente au bivouac" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Salon Extérieur Panoramique</span>
+          <span class="text-white/70 text-xs">Bivouac de Luxe</span>
+        </div>
+      </div>
+
+      <!-- Photo 16 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="dunes" data-caption="Les premières lueurs dorées du lever de soleil sur l'erg infini">
+        <img src="garoly/photo_5902144165997383490_y.jpg" alt="Lever de soleil sur les dunes" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Lueurs Dorées du Matin</span>
+          <span class="text-white/70 text-xs">Dunes & Couchers de Soleil</span>
+        </div>
+      </div>
+
+      <!-- Photo 17 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="activities" data-caption="Exploration des immenses étendues sauvages de l'ancien lac asséché d'Iriki">
+        <img src="garoly/photo_5902144165997383492_y.jpg" alt="Expédition Lac Iriki" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Plaines Salées du Lac Iriki</span>
+          <span class="text-white/70 text-xs">Aventures & 4x4</span>
+        </div>
+      </div>
+
+      <!-- Photo 18 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="camp" data-caption="Vue panoramique sur le campement de luxe abrité au creux des grandes dunes">
+        <img src="garoly/photo_5902144165997383493_y.jpg" alt="Vue d'ensemble du bivouac" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Cadre du Bivouac de Luxe</span>
+          <span class="text-white/70 text-xs">Bivouac de Luxe</span>
+        </div>
+      </div>
+
+      <!-- Photo 19 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="nomads" data-caption="Accueil chaleureux à l'arrivée avec dattes locales et thé à la menthe">
+        <img src="garoly/photo_5902144165997383494_y.jpg" alt="Accueil chaleureux nomade" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Cérémonie d'Accueil Berbère</span>
+          <span class="text-white/70 text-xs">Vie Nomade</span>
+        </div>
+      </div>
+
+      <!-- Photo 20 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="dunes" data-caption="Jeux d'ombres et arêtes tranchantes dessinées par le soleil rasant">
+        <img src="garoly/photo_5902144165997383495_y.jpg" alt="Ombres sur les crêtes de sable" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Ombres et Arêtes du Désert</span>
+          <span class="text-white/70 text-xs">Dunes & Couchers de Soleil</span>
+        </div>
+      </div>
+
+      <!-- Photo 21 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="camp" data-caption="Les allées du bivouac illuminées à la bougie sous la nuit saharienne">
+        <img src="garoly/photo_5902144165997383496_y.jpg" alt="Allées illuminées du camp de nuit" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Nuit Saharienne Illuminée</span>
+          <span class="text-white/70 text-xs">Bivouac de Luxe</span>
+        </div>
+      </div>
+
+      <!-- Photo 22 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="dunes" data-caption="Horizon saharien infini sous un ciel bleu d'azur">
+        <img src="garoly/photo_5902144165997383476_y.jpg" alt="Horizon infini du Sahara" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Horizons Infinis du Sahara</span>
+          <span class="text-white/70 text-xs">Dunes & Couchers de Soleil</span>
+        </div>
+      </div>
+
+      <!-- Photo 23 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="activities" data-caption="Silhouette majestueuse d'une caravane de dromadaires au crépuscule">
+        <img src="garoly/photo_5902144165997383486_y.jpg" alt="Silhouette caravane coucher de soleil" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Silhouette de Caravane</span>
+          <span class="text-white/70 text-xs">Aventures & 4x4</span>
+        </div>
+      </div>
+
+      <!-- Photo 24 -->
+      <div class="gallery-item gallery-card aspect-[4/3]" data-category="nomads" data-caption="Mode de vie nomade authentique et respectueux des traditions ancestrales">
+        <img src="garoly/photo_5902144165997383487_x.jpg" alt="Héritage nomade saharien" class="w-full h-full object-cover">
+        <div class="gallery-overlay">
+          <span class="text-white text-sm font-bold">Héritage Nomade Saharien</span>
+          <span class="text-white/70 text-xs">Vie Nomade</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="gallery-lightbox" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden flex-col items-center justify-center p-4 select-none">
+    <div class="absolute top-6 left-6 right-6 flex items-center justify-between text-white z-20">
+      <span id="lightbox-caption" class="text-xs sm:text-sm font-semibold tracking-wide uppercase">Légende de la photo</span>
+      <div class="flex items-center gap-4">
+        <span id="lightbox-index" class="text-xs text-white/60">1 / 24</span>
+        <button id="close-lightbox-btn" class="p-2 hover:bg-white/10 rounded-full transition-colors text-xl" aria-label="Fermer la boîte lumineuse">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="relative max-w-5xl max-h-[80vh] flex items-center justify-center p-2">
+      <img id="lightbox-img" src="" alt="Photo active" class="max-w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl border border-white/10">
+    </div>
+
+    <button id="prev-lightbox-btn" class="absolute left-6 p-4 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors backdrop-blur-sm" aria-label="Photo précédente">
+      <i class="fas fa-chevron-left text-lg"></i>
+    </button>
+    <button id="next-lightbox-btn" class="absolute right-6 p-4 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors backdrop-blur-sm" aria-label="Photo suivante">
+      <i class="fas fa-chevron-right text-lg"></i>
+    </button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-desert-stone text-white/80 pt-16 pb-8 border-t border-desert-terracotta/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/60 gap-4">
+      <p>&copy; 2026 Erg Chegaga Desert Tours. Tous droits réservés.</p>
+      <div class="flex gap-4">
+        <a href="index.html" class="hover:text-white">Accueil</a>
+        <a href="about.html" class="hover:text-white">À Propos</a>
+        <a href="tours.html" class="hover:text-white">Circuits</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

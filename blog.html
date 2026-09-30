@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Guides de Voyage Saharien — Erg Chegaga Desert Tours</title>
+  <meta name="description" content="Guides de voyage, conseils pratiques et récits sur Erg Chegaga : que mettre dans sa valise, comparatif Chegaga vs Merzouga, histoire du Lac Iriki et conseils 4x4.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog & Guides de Voyage Saharien — Erg Chegaga Desert Tours">
+  <meta property="og:description" content="Articles détaillés et conseils d'experts nomades pour explorer les dunes sauvages d'Erg Chegaga au Maroc.">
+  <meta property="og:image" content="images/hero-dunes.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo-gold.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            desert: {
+              light: '#faf6f0',
+              sand: '#f4ebd9',
+              terracotta: '#c2410c',
+              ochre: '#b45309',
+              gold: '#f59e0b',
+              stone: '#1c1917',
+              oasis: '#10b981',
+              whatsapp: '#25D366'
+            }
+          },
+          fontFamily: {
+            sans: ['Rubik', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-desert-light text-desert-stone font-sans antialiased selection:bg-desert-terracotta selection:text-white">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 nav-transparent text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="images/logo-gold.png" alt="Logo Erg Chegaga" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        <div class="flex flex-col">
+          <span id="nav-logo-text" class="font-heading font-extrabold text-lg sm:text-xl tracking-wider uppercase text-white transition-colors">Erg Chegaga</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-desert-gold font-bold">Desert Tours</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+        <a href="index.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Accueil</a>
+        <a href="about.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">À Propos</a>
+        <a href="activities.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Activités</a>
+        <a href="tours.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Circuits</a>
+        <a href="camp.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Bivouac de Luxe</a>
+        <a href="gallery.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Galerie</a>
+        <a href="blog.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-desert-gold">Blog</a>
+        <a href="contact.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20visiter%20Erg%20Chegaga." target="_blank" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-desert-terracotta hover:bg-desert-ochre text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all transform active:scale-95">
+          <i class="fab fa-whatsapp text-sm"></i> Réserver
+        </a>
+        <button id="mobile-menu-open-btn" class="lg:hidden p-2 rounded-xl bg-black/30 hover:bg-black/50 text-white transition-colors" aria-label="Ouvrir le menu">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md lg:hidden transition-transform duration-300 translate-x-full pointer-events-none">
+    <div class="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-desert-light h-full shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-desert-sand mb-6">
+          <span class="font-heading font-extrabold text-sm uppercase text-desert-terracotta">Erg Chegaga</span>
+          <button id="mobile-menu-close-btn" class="p-2 rounded-full hover:bg-desert-sand text-desert-stone" aria-label="Fermer le menu">
+            <i class="fas fa-times text-lg"></i>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-4 font-heading font-bold text-sm uppercase tracking-wider text-desert-stone">
+          <a href="index.html" class="drawer-link py-2 border-b border-desert-sand/50">Accueil</a>
+          <a href="about.html" class="drawer-link py-2 border-b border-desert-sand/50">À Propos</a>
+          <a href="activities.html" class="drawer-link py-2 border-b border-desert-sand/50">Activités Désert</a>
+          <a href="tours.html" class="drawer-link py-2 border-b border-desert-sand/50">Circuits & Packages</a>
+          <a href="camp.html" class="drawer-link py-2 border-b border-desert-sand/50">Bivouac de Luxe</a>
+          <a href="gallery.html" class="drawer-link py-2 border-b border-desert-sand/50">Galerie Photos</a>
+          <a href="blog.html" class="drawer-link py-2 border-b border-desert-sand/50 text-desert-terracotta">Blog</a>
+          <a href="contact.html" class="drawer-link py-2">Contactez-nous</a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-desert-sand">
+        <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20visiter%20Erg%20Chegaga." target="_blank" class="w-full py-3 bg-desert-terracotta text-white font-bold text-xs uppercase tracking-wider rounded-xl text-center block shadow">
+          <i class="fab fa-whatsapp mr-1"></i> Réservation WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- INNER HERO BANNER -->
+  <section class="relative pt-40 pb-24 bg-desert-stone text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="images/hero-dunes.jpg" alt="Blog Désert Sahara" class="w-full h-full object-cover opacity-35">
+      <div class="absolute inset-0 bg-gradient-to-t from-desert-stone via-desert-stone/70 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span class="text-xs font-heading font-extrabold uppercase tracking-[0.3em] text-desert-gold inline-block">Récits, Conseils & Guides Pratiques</span>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold tracking-tight">Blog & Guides du Désert</h1>
+      <p class="text-sm sm:text-base text-white/80 max-w-2xl mx-auto font-light leading-relaxed">
+        Tout ce que vous devez savoir pour organiser votre voyage à Erg Chegaga, préparer votre valise et explorer les merveilles du Sahara marocain.
+      </p>
+      <div class="flex items-center justify-center gap-2 text-xs text-white/60 pt-2">
+        <a href="index.html" class="hover:text-white transition-colors">Accueil</a>
+        <span>/</span>
+        <span class="text-desert-gold font-semibold">Blog</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG SECTION -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-desert-sand/60">
+      <div>
+        <span class="text-xs font-heading font-extrabold uppercase tracking-[0.25em] text-desert-terracotta">Espace Découverte</span>
+        <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-desert-stone tracking-tight mt-1">
+          Derniers Articles & Conseils
+        </h2>
+      </div>
+
+      <!-- Live Search Input -->
+      <div class="w-full md:w-80">
+        <div class="relative">
+          <i class="fas fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-desert-stone/40 text-xs"></i>
+          <input type="text" id="blog-search" placeholder="Rechercher un article..." class="w-full bg-white text-xs pl-9 pr-4 py-3 rounded-xl border border-desert-sand focus:outline-none focus:border-desert-terracotta">
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Posts Grid -->
+    <div id="blog-posts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+
+  </section>
+
+  <!-- BLOG ARTICLE MODAL -->
+  <div id="blog-article-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative animate-fade-in-up">
+      <button id="close-blog-modal-btn" class="absolute top-4 right-4 z-20 w-9 h-9 bg-black/60 hover:bg-black text-white rounded-full flex items-center justify-center transition-colors" aria-label="Fermer l'article">
+        <i class="fas fa-times text-sm"></i>
+      </button>
+
+      <div class="h-64 sm:h-80 relative overflow-hidden">
+        <img id="blog-modal-img" src="" alt="" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6">
+          <span id="blog-modal-tag" class="bg-desert-terracotta text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2 inline-block">Tag</span>
+          <h2 id="blog-modal-title" class="font-heading font-extrabold text-2xl sm:text-3xl text-white">Titre de l'article</h2>
+          <span id="blog-modal-date" class="text-white/70 text-xs mt-1 block">Sep 2026</span>
+        </div>
+      </div>
+
+      <div id="blog-modal-body" class="p-6 sm:p-10 text-xs sm:text-sm text-desert-stone/85 leading-relaxed space-y-4"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-desert-stone text-white/80 pt-16 pb-8 border-t border-desert-terracotta/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/60 gap-4">
+      <p>&copy; 2026 Erg Chegaga Desert Tours. Tous droits réservés.</p>
+      <div class="flex gap-4">
+        <a href="index.html" class="hover:text-white">Accueil</a>
+        <a href="about.html" class="hover:text-white">À Propos</a>
+        <a href="tours.html" class="hover:text-white">Circuits</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À Propos — Erg Chegaga Desert Tours | Nomades Sahariens Authentiques</title>
+  <meta name="description" content="Découvrez l'histoire d'Erg Chegaga Desert Tours. Guides nomades berbères natifs de M'hamid El Ghizlane organisant bivouacs de luxe, méharées à dromadaire et expéditions 4x4 dans le Sahara.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="À Propos — Erg Chegaga Desert Tours">
+  <meta property="og:description" content="Découvrez nos origines nomades et notre passion pour les plus hautes dunes de sable du Maroc.">
+  <meta property="og:image" content="images/hero-dunes.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo-gold.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            desert: {
+              light: '#faf6f0',
+              sand: '#f4ebd9',
+              terracotta: '#c2410c',
+              ochre: '#b45309',
+              gold: '#f59e0b',
+              stone: '#1c1917',
+              oasis: '#10b981',
+              whatsapp: '#25D366'
+            }
+          },
+          fontFamily: {
+            sans: ['Rubik', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-desert-light text-desert-stone font-sans antialiased selection:bg-desert-terracotta selection:text-white">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 nav-transparent text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="images/logo-gold.png" alt="Logo Erg Chegaga" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        <div class="flex flex-col">
+          <span id="nav-logo-text" class="font-heading font-extrabold text-lg sm:text-xl tracking-wider uppercase text-white transition-colors">Erg Chegaga</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-desert-gold font-bold">Desert Tours</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+        <a href="index.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Accueil</a>
+        <a href="about.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-desert-gold">À Propos</a>
+        <a href="activities.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Activités</a>
+        <a href="tours.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Circuits</a>
+        <a href="camp.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Bivouac de Luxe</a>
+        <a href="gallery.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Galerie</a>
+        <a href="blog.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Blog</a>
+        <a href="contact.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20un%20circuit%20%C3%A0%20Erg%20Chegaga." target="_blank" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-desert-terracotta hover:bg-desert-ochre text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all transform active:scale-95">
+          <i class="fab fa-whatsapp text-sm"></i> Réserver
+        </a>
+        <button id="mobile-menu-open-btn" class="lg:hidden p-2 rounded-xl bg-black/30 hover:bg-black/50 text-white transition-colors" aria-label="Ouvrir le menu">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md lg:hidden transition-transform duration-300 translate-x-full pointer-events-none">
+    <div class="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-desert-light h-full shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-desert-sand mb-6">
+          <span class="font-heading font-extrabold text-sm uppercase text-desert-terracotta">Erg Chegaga</span>
+          <button id="mobile-menu-close-btn" class="p-2 rounded-full hover:bg-desert-sand text-desert-stone" aria-label="Fermer le menu">
+            <i class="fas fa-times text-lg"></i>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-4 font-heading font-bold text-sm uppercase tracking-wider text-desert-stone">
+          <a href="index.html" class="drawer-link py-2 border-b border-desert-sand/50">Accueil</a>
+          <a href="about.html" class="drawer-link py-2 border-b border-desert-sand/50 text-desert-terracotta">À Propos</a>
+          <a href="activities.html" class="drawer-link py-2 border-b border-desert-sand/50">Activités Désert</a>
+          <a href="tours.html" class="drawer-link py-2 border-b border-desert-sand/50">Circuits & Packages</a>
+          <a href="camp.html" class="drawer-link py-2 border-b border-desert-sand/50">Bivouac de Luxe</a>
+          <a href="gallery.html" class="drawer-link py-2 border-b border-desert-sand/50">Galerie Photos</a>
+          <a href="blog.html" class="drawer-link py-2 border-b border-desert-sand/50">Blog</a>
+          <a href="contact.html" class="drawer-link py-2">Contactez-nous</a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-desert-sand">
+        <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20un%20circuit%20%C3%A0%20Erg%20Chegaga." target="_blank" class="w-full py-3 bg-desert-terracotta text-white font-bold text-xs uppercase tracking-wider rounded-xl text-center block shadow">
+          <i class="fab fa-whatsapp mr-1"></i> Réservation WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- INNER HERO BANNER -->
+  <section class="relative pt-40 pb-24 bg-desert-stone text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="images/hero-dunes.jpg" alt="Dunes d'Erg Chegaga" class="w-full h-full object-cover opacity-35">
+      <div class="absolute inset-0 bg-gradient-to-t from-desert-stone via-desert-stone/70 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span class="text-xs font-heading font-extrabold uppercase tracking-[0.3em] text-desert-gold inline-block">Héritage Nomade Authentique</span>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold tracking-tight">À Propos d'Erg Chegaga Tours</h1>
+      <p class="text-sm sm:text-base text-white/80 max-w-2xl mx-auto font-light leading-relaxed">
+        Nés au pied des plus hautes dunes de sable du Maroc, nous sommes des guides berbères locaux dévoués à partager la magie brute et sauvage du véritable Sahara.
+      </p>
+      <div class="flex items-center justify-center gap-2 text-xs text-white/60 pt-2">
+        <a href="index.html" class="hover:text-white transition-colors">Accueil</a>
+        <span>/</span>
+        <span class="text-desert-gold font-semibold">À Propos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY SECTION -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="space-y-6">
+        <span class="text-xs font-heading font-extrabold uppercase tracking-[0.25em] text-desert-terracotta">Nos Racines</span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-desert-stone tracking-tight leading-tight">
+          Des Siècles de Sagesse Nomade au Cœur des Grandes Dunes
+        </h2>
+        <p class="text-desert-stone/80 text-sm leading-relaxed">
+          Depuis des générations, notre famille a vécu une existence purement nomade dans la vallée du Draa et à travers les immenses étendues reliant <strong>M'hamid El Ghizlane</strong>, le <strong>Lac Iriki</strong> et les crêtes d'<strong>Erg Chegaga</strong>. Nous avons appris à connaître le désert non pas grâce à des cartes ou un GPS, mais en lisant les ondulations du vent sur le sable et en naviguant aux étoiles.
+        </p>
+        <p class="text-desert-stone/80 text-sm leading-relaxed">
+          Quand le monde a commencé à s'émerveiller devant la beauté du Sahara, nous avons fondé <strong>Erg Chegaga Desert Tours</strong> pour offrir une réelle alternative au tourisme commercial de masse. Nous souhaitons faire vivre aux voyageurs l'âme véritable du désert : le silence absolu, la chaleur de l'hospitalité nomade, le parfum du pain cuit dans le sable et le chant ancestral des tambours Gnawa sous un dôme infini d'étoiles.
+        </p>
+
+        <!-- Feature List -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+          <div class="flex items-start gap-3">
+            <i class="fas fa-check-circle text-desert-terracotta text-base mt-0.5"></i>
+            <div>
+              <h5 class="text-xs font-bold text-desert-stone">Nés dans les Dunes</h5>
+              <p class="text-[11px] text-desert-stone/70">Guides nomades natifs dotés d'une connaissance intime du terrain saharien.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <i class="fas fa-check-circle text-desert-terracotta text-base mt-0.5"></i>
+            <div>
+              <h5 class="text-xs font-bold text-desert-stone">Bivouac Éco-Responsable</h5>
+              <p class="text-[11px] text-desert-stone/70">Camp de luxe 100% autonome à l'énergie solaire, préservant l'écosystème fragile.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <i class="fas fa-check-circle text-desert-terracotta text-base mt-0.5"></i>
+            <div>
+              <h5 class="text-xs font-bold text-desert-stone">Flotte 4x4 Tout-Terrain</h5>
+              <p class="text-[11px] text-desert-stone/70">Toyota Land Cruisers préparés pour des franchissements de dunes confortables et sûrs.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <i class="fas fa-check-circle text-desert-terracotta text-base mt-0.5"></i>
+            <div>
+              <h5 class="text-xs font-bold text-desert-stone">Transparence & Éthique</h5>
+              <p class="text-[11px] text-desert-stone/70">Tarifs clairs sans frais cachés, retombées directes pour les familles nomades locales.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Grid -->
+      <div class="grid grid-cols-2 gap-4">
+        <div class="rounded-3xl overflow-hidden shadow-lg aspect-[3/4]">
+          <img src="images/trek-caravan-dunes.jpg" alt="Caravane de dromadaires" class="w-full h-full object-cover">
+        </div>
+        <div class="space-y-4 pt-6">
+          <div class="rounded-3xl overflow-hidden shadow-lg aspect-square">
+            <img src="images/slider-milkyway-camp.jpg" alt="Bivouac de nuit sous la voie lactée" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 bg-desert-sand/40 rounded-3xl border border-desert-sand">
+            <span class="block text-3xl font-heading font-extrabold text-desert-terracotta">15+</span>
+            <span class="text-xs font-bold text-desert-stone uppercase">Années d'Expéditions Sahariennes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ERG CHEGAGA VS MERZOUGA -->
+  <section class="py-20 bg-desert-sand/25 border-y border-desert-sand/50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="text-center space-y-3">
+        <span class="text-xs font-heading font-extrabold uppercase tracking-[0.25em] text-desert-terracotta">Comprendre la Différence</span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-desert-stone tracking-tight">
+          Pourquoi les Voyageurs Avertis Choisissent Erg Chegaga
+        </h2>
+        <p class="text-xs sm:text-sm text-desert-stone/70 max-w-xl mx-auto">
+          Découvrez pourquoi les amoureux de nature et d'aventure préfèrent Chegaga aux dunes très fréquentées de Merzouga.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-desert-sand/60 space-y-4">
+          <div class="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-bold uppercase rounded-lg">Erg Chegaga (Notre Désert Sauvage)</div>
+          <ul class="text-xs text-desert-stone/85 space-y-2.5">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-600"></i> Dunes géantes culminant à 300 mètres de hauteur</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-600"></i> 60 km d'aventure 4x4 hors-piste loin de tout goudron</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-600"></i> Nature préservée avec zéro pollution lumineuse</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-600"></i> Traversée du mythique lac Iriki et gisements de fossiles</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-600"></i> Paix profonde et véritable silence majestueux du Sahara</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-desert-sand/60 space-y-4 opacity-80">
+          <div class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-bold uppercase rounded-lg">Erg Chebbi (Merzouga)</div>
+          <ul class="text-xs text-desert-stone/70 space-y-2.5">
+            <li class="flex items-center gap-2"><i class="fas fa-times text-red-500"></i> Route goudronnée arrivant au pied immédiat des dunes</li>
+            <li class="flex items-center gap-2"><i class="fas fa-times text-red-500"></i> Des dizaines d'hôtels, éclairages urbains et circulation</li>
+            <li class="flex items-center gap-2"><i class="fas fa-times text-red-500"></i> Forte pollution lumineuse masquant le ciel étoilé</li>
+            <li class="flex items-center gap-2"><i class="fas fa-times text-red-500"></i> Affluence touristique importante sur un espace resserré</li>
+            <li class="flex items-center gap-2"><i class="fas fa-times text-red-500"></i> Sentiment d'expédition saharienne restreint</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-desert-stone text-white px-4 text-center">
+    <div class="max-w-3xl mx-auto space-y-6">
+      <h2 class="text-3xl sm:text-4xl font-heading font-extrabold">Prêt à Vivre la Vraie Aventure Saharienne ?</h2>
+      <p class="text-sm text-white/80">Contactez notre équipe dès aujourd'hui pour concevoir votre voyage sur mesure à Erg Chegaga.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+        <a href="tours.html" class="px-8 py-3.5 bg-desert-terracotta hover:bg-desert-ochre text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-colors">
+          Découvrir les Circuits
+        </a>
+        <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20un%20circuit%20%C3%A0%20Erg%20Chegaga." target="_blank" class="px-8 py-3.5 bg-desert-whatsapp hover:bg-green-600 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-colors flex items-center justify-center gap-2">
+          <i class="fab fa-whatsapp"></i> Échanger sur WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-desert-stone text-white/80 pt-16 pb-8 border-t border-desert-terracotta/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/60 gap-4">
+      <p>&copy; 2026 Erg Chegaga Desert Tours. Tous droits réservés.</p>
+      <div class="flex gap-4">
+        <a href="index.html" class="hover:text-white">Accueil</a>
+        <a href="activities.html" class="hover:text-white">Activités</a>
+        <a href="tours.html" class="hover:text-white">Circuits</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Custom Logic -->
+  <script src="app.js"></script>
+</body>
+</html>

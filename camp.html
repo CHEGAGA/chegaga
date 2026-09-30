@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bivouac de Luxe & Glamping — Erg Chegaga Desert Tours</title>
+  <meta name="description" content="Vivez une expérience de glamping de luxe à Erg Chegaga. Tentes privées avec salle de bain, eau chaude, lits King-size, électricité 100% solaire et gastronomie saharienne sous les étoiles.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bivouac de Luxe & Glamping — Erg Chegaga Desert Tours">
+  <meta property="og:description" content="Dormez dans des tentes privées d'exception avec douches chaudes, lits spacieux et veillées musicales sous la Voie Lactée.">
+  <meta property="og:image" content="images/slider-milkyway-camp.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo-gold.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            desert: {
+              light: '#faf6f0',
+              sand: '#f4ebd9',
+              terracotta: '#c2410c',
+              ochre: '#b45309',
+              gold: '#f59e0b',
+              stone: '#1c1917',
+              oasis: '#10b981',
+              whatsapp: '#25D366'
+            }
+          },
+          fontFamily: {
+            sans: ['Rubik', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-desert-light text-desert-stone font-sans antialiased selection:bg-desert-terracotta selection:text-white">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 nav-transparent text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="images/logo-gold.png" alt="Logo Erg Chegaga" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        <div class="flex flex-col">
+          <span id="nav-logo-text" class="font-heading font-extrabold text-lg sm:text-xl tracking-wider uppercase text-white transition-colors">Erg Chegaga</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-desert-gold font-bold">Desert Tours</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+        <a href="index.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Accueil</a>
+        <a href="about.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">À Propos</a>
+        <a href="activities.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Activités</a>
+        <a href="tours.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Circuits</a>
+        <a href="camp.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-desert-gold">Bivouac de Luxe</a>
+        <a href="gallery.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Galerie</a>
+        <a href="blog.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Blog</a>
+        <a href="contact.html" class="nav-link-item text-xs uppercase tracking-wider font-bold transition-colors text-white hover:text-desert-gold">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20une%20tente%20de%20luxe%20%C3%A0%20Erg%20Chegaga." target="_blank" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-desert-terracotta hover:bg-desert-ochre text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all transform active:scale-95">
+          <i class="fab fa-whatsapp text-sm"></i> Réserver
+        </a>
+        <button id="mobile-menu-open-btn" class="lg:hidden p-2 rounded-xl bg-black/30 hover:bg-black/50 text-white transition-colors" aria-label="Ouvrir le menu">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu-drawer" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md lg:hidden transition-transform duration-300 translate-x-full pointer-events-none">
+    <div class="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-desert-light h-full shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-desert-sand mb-6">
+          <span class="font-heading font-extrabold text-sm uppercase text-desert-terracotta">Erg Chegaga</span>
+          <button id="mobile-menu-close-btn" class="p-2 rounded-full hover:bg-desert-sand text-desert-stone" aria-label="Fermer le menu">
+            <i class="fas fa-times text-lg"></i>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-4 font-heading font-bold text-sm uppercase tracking-wider text-desert-stone">
+          <a href="index.html" class="drawer-link py-2 border-b border-desert-sand/50">Accueil</a>
+          <a href="about.html" class="drawer-link py-2 border-b border-desert-sand/50">À Propos</a>
+          <a href="activities.html" class="drawer-link py-2 border-b border-desert-sand/50">Activités Désert</a>
+          <a href="tours.html" class="drawer-link py-2 border-b border-desert-sand/50">Circuits & Packages</a>
+          <a href="camp.html" class="drawer-link py-2 border-b border-desert-sand/50 text-desert-terracotta">Bivouac de Luxe</a>
+          <a href="gallery.html" class="drawer-link py-2 border-b border-desert-sand/50">Galerie Photos</a>
+          <a href="blog.html" class="drawer-link py-2 border-b border-desert-sand/50">Blog</a>
+          <a href="contact.html" class="drawer-link py-2">Contactez-nous</a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-desert-sand">
+        <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20une%20tente%20de%20luxe%20%C3%A0%20Erg%20Chegaga." target="_blank" class="w-full py-3 bg-desert-terracotta text-white font-bold text-xs uppercase tracking-wider rounded-xl text-center block shadow">
+          <i class="fab fa-whatsapp mr-1"></i> Réservation WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- INNER HERO BANNER -->
+  <section class="relative pt-40 pb-24 bg-desert-stone text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="images/slider-milkyway-camp.jpg" alt="Bivouac de luxe Erg Chegaga" class="w-full h-full object-cover opacity-35">
+      <div class="absolute inset-0 bg-gradient-to-t from-desert-stone via-desert-stone/70 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span class="text-xs font-heading font-extrabold uppercase tracking-[0.3em] text-desert-gold inline-block">Glamping au Cœur du Sahara</span>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold tracking-tight">Bivouac de Luxe Erg Chegaga</h1>
+      <p class="text-sm sm:text-base text-white/80 max-w-2xl mx-auto font-light leading-relaxed">
+        Vivez l'élégance nomade nichée au pied des plus hautes dunes du Maroc. Douches chaudes privées, lits King-size, festins aux chandelles et silence infini.
+      </p>
+      <div class="flex items-center justify-center gap-2 text-xs text-white/60 pt-2">
+        <a href="index.html" class="hover:text-white transition-colors">Accueil</a>
+        <span>/</span>
+        <span class="text-desert-gold font-semibold">Bivouac de Luxe</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMP OVERVIEW -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="space-y-6">
+        <span class="text-xs font-heading font-extrabold uppercase tracking-[0.25em] text-desert-terracotta">Une Oasis de Sérénité</span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-desert-stone tracking-tight leading-tight">
+          Quand le Grand Confort Rencontre le Désert Sauvage
+        </h2>
+        <p class="text-desert-stone/80 text-sm leading-relaxed">
+          Niché dans un cirque naturel de dunes dorées au cœur d'Erg Chegaga, notre bivouac offre un isolement absolu. Vous n'entendrez rien d'autre que la douce caresse du vent saharien sur les crêtes de sable fin.
+        </p>
+        <p class="text-desert-stone/80 text-sm leading-relaxed">
+          Bien loin du camping traditionnel, chaque tente est conçue comme une véritable suite saharienne. En pénétrant à l'intérieur, vous découvrirez d'épais tapis berbères faits main, du mobilier en cèdre sculpté, une literie haut de gamme et une salle de bain privative attenante avec vraie douche chaude et toilettes.
+        </p>
+
+        <!-- Key Camp Highlights -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+          <div class="p-4 bg-white rounded-2xl border border-desert-sand/60 text-center shadow-sm">
+            <i class="fas fa-shower text-desert-terracotta text-xl mb-2"></i>
+            <h5 class="text-xs font-bold text-desert-stone">Douches Chaudes</h5>
+            <p class="text-[10px] text-desert-stone/60">Privées dans chaque tente</p>
+          </div>
+          <div class="p-4 bg-white rounded-2xl border border-desert-sand/60 text-center shadow-sm">
+            <i class="fas fa-bed text-desert-terracotta text-xl mb-2"></i>
+            <h5 class="text-xs font-bold text-desert-stone">Lits King-Size</h5>
+            <p class="text-[10px] text-desert-stone/60">Draps en coton soyeux</p>
+          </div>
+          <div class="p-4 bg-white rounded-2xl border border-desert-sand/60 text-center shadow-sm">
+            <i class="fas fa-solar-panel text-desert-terracotta text-xl mb-2"></i>
+            <h5 class="text-xs font-bold text-desert-stone">100% Solaire</h5>
+            <p class="text-[10px] text-desert-stone/60">Écologique & silencieux</p>
+          </div>
+          <div class="p-4 bg-white rounded-2xl border border-desert-sand/60 text-center shadow-sm">
+            <i class="fas fa-utensils text-desert-terracotta text-xl mb-2"></i>
+            <h5 class="text-xs font-bold text-desert-stone">Cuisine Nomade</h5>
+            <p class="text-[10px] text-desert-stone/60">Tajines traditionnels mijotés</p>
+          </div>
+          <div class="p-4 bg-white rounded-2xl border border-desert-sand/60 text-center shadow-sm">
+            <i class="fas fa-fire text-desert-terracotta text-xl mb-2"></i>
+            <h5 class="text-xs font-bold text-desert-stone">Soirée Gnawa</h5>
+            <p class="text-[10px] text-desert-stone/60">Chaque soir au feu de camp</p>
+          </div>
+          <div class="p-4 bg-white rounded-2xl border border-desert-sand/60 text-center shadow-sm">
+            <i class="fas fa-star text-desert-terracotta text-xl mb-2"></i>
+            <h5 class="text-xs font-bold text-desert-stone">Voie Lactée</h5>
+            <p class="text-[10px] text-desert-stone/60">Zéro pollution lumineuse</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Camp Visuals -->
+      <div class="grid grid-cols-2 gap-4">
+        <div class="rounded-3xl overflow-hidden shadow-lg h-64">
+          <img src="images/trek-tent-night.jpg" alt="Intérieur de la tente de luxe" class="w-full h-full object-cover">
+        </div>
+        <div class="rounded-3xl overflow-hidden shadow-lg h-64">
+          <img src="garoly/photo_5902144165997383485_y.jpg" alt="Dîner au bivouac" class="w-full h-full object-cover">
+        </div>
+        <div class="col-span-2 rounded-3xl overflow-hidden shadow-lg h-56">
+          <img src="images/slider-milkyway-camp.jpg" alt="Bivouac illuminé sous les étoiles" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+
+    <!-- DINING EXPERIENCE -->
+    <div class="bg-white rounded-3xl p-8 sm:p-12 border border-desert-sand/70 shadow-lg space-y-6">
+      <div class="max-w-3xl space-y-3">
+        <span class="text-xs font-heading font-extrabold uppercase tracking-[0.25em] text-desert-terracotta">Tradition Culinaire</span>
+        <h3 class="text-2xl sm:text-3xl font-heading font-extrabold text-desert-stone">Dîner Gastronomique sous la Voûte Étoilée</h3>
+        <p class="text-xs sm:text-sm text-desert-stone/80 leading-relaxed">
+          Le dîner dans notre bivouac est un rituel envoûtant. À la tombée de la nuit, les lanternes à la bougie illuminent les allées de tapis menant à la grande tente restaurant caïdale et aux salons extérieurs à ciel ouvert.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+        <div class="p-6 bg-desert-light rounded-2xl border border-desert-sand/60">
+          <h5 class="font-bold text-sm text-desert-stone mb-2"><i class="fas fa-bread-slice text-desert-terracotta mr-2"></i> Pain Cuit dans le Sable (Medfouna)</h5>
+          <p class="text-xs text-desert-stone/75 leading-relaxed">Assistez à la préparation spectaculaire où la pâte fraîchement pétrie est enfouie sous les braises de sable chaud par nos cuisiniers nomades.</p>
+        </div>
+
+        <div class="p-6 bg-desert-light rounded-2xl border border-desert-sand/60">
+          <h5 class="font-bold text-sm text-desert-stone mb-2"><i class="fas fa-fire-burner text-desert-terracotta mr-2"></i> Tajines Mijotés à Feu Doux</h5>
+          <p class="text-xs text-desert-stone/75 leading-relaxed">Savourez un agneau fondant aux pruneaux et amandes, un poulet fermier confit au citron ou un tajine de légumes du terroir mijoté pendant des heures.</p>
+        </div>
+
+        <div class="p-6 bg-desert-light rounded-2xl border border-desert-sand/60">
+          <h5 class="font-bold text-sm text-desert-stone mb-2"><i class="fas fa-mug-hot text-desert-terracotta mr-2"></i> Rituel du Thé Nomade</h5>
+          <p class="text-xs text-desert-stone/75 leading-relaxed">Thé vert infusé à la menthe fraîche et au thym sauvage du désert, versé en cascade aérienne dans des verres traditionnels ciselés.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOKING CTA -->
+    <div class="p-10 bg-desert-stone text-white rounded-3xl text-center space-y-6 shadow-xl">
+      <h3 class="text-2xl sm:text-3xl font-heading font-extrabold">Réservez Votre Tente de Luxe à Erg Chegaga</h3>
+      <p class="text-xs sm:text-sm text-white/80 max-w-xl mx-auto">
+        Le nombre de tentes est volontairement limité pour préserver l'intimité et le calme absolu du désert. Vérifiez vos dates par WhatsApp.
+      </p>
+      <a href="https://wa.me/212699374176?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20une%20tente%20de%20luxe%20%C3%A0%20Erg%20Chegaga." target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-desert-terracotta hover:bg-desert-ochre text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition-colors">
+        <i class="fab fa-whatsapp text-sm"></i> Vérifier la Disponibilité sur WhatsApp
+      </a>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-desert-stone text-white/80 pt-16 pb-8 border-t border-desert-terracotta/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/60 gap-4">
+      <p>&copy; 2026 Erg Chegaga Desert Tours. Tous droits réservés.</p>
+      <div class="flex gap-4">
+        <a href="index.html" class="hover:text-white">Accueil</a>
+        <a href="about.html" class="hover:text-white">À Propos</a>
+        <a href="tours.html" class="hover:text-white">Circuits</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
