@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+﻿document.addEventListener("DOMContentLoaded", () => {
   initNavbar();
   initMobileMenu();
   initHeroSlider();
@@ -247,7 +247,7 @@ function initActivitiesModals() {
 
         if (modalWaBtn) {
           const waMsg = encodeURIComponent(`Bonjour ! Je souhaite réserver ou obtenir des informations sur l'activité : ${data.title} (${data.price}) à Erg Chegaga.`);
-          modalWaBtn.href = `https://wa.me/212699374176?text=${waMsg}`;
+          modalWaBtn.href = `https://wa.me/212615396800?text=${waMsg}`;
         }
 
         modal.classList.remove("hidden");
@@ -608,7 +608,7 @@ function initBookingForm() {
       (notes ? `📝 *Demandes particulières :* ${notes}\n\n` : `\n`) +
       `Merci de m'indiquer les disponibilités et le tarif. À bientôt !`;
 
-    const waUrl = `https://wa.me/212699374176?text=${encodeURIComponent(msg)}`;
+    const waUrl = `https://wa.me/212615396800?text=${encodeURIComponent(msg)}`;
     window.open(waUrl, "_blank");
 
     const feedback = document.getElementById("booking-feedback");

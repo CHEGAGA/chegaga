@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
@@ -52,7 +52,7 @@ $date = htmlspecialchars(strip_tags($date));
 $guests = htmlspecialchars(strip_tags($guests));
 $message = htmlspecialchars(strip_tags($message));
 
-$to = "ergchegagadesert19@gmail.com";
+$to = "ergchegaga1@gmail.com";
 $email_subject = "Nouvelle Demande : Erg Chegaga Desert Tours ($name)";
 
 date_default_timezone_set("UTC");
@@ -79,6 +79,6 @@ if (@mail($to, $email_subject, $email_body, $headers)) {
     echo json_encode(["success" => true, "message" => "Merci ! Votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais."]);
 } else {
     // If mail function fails on local server, return friendly fallback
-    echo json_encode(["success" => true, "message" => "Demande enregistrée. Vous pouvez également nous contacter directement sur WhatsApp au +212 699 374 176."]);
+    echo json_encode(["success" => true, "message" => "Demande enregistrée. Vous pouvez également nous contacter directement sur WhatsApp au +212 615 396 800."]);
 }
 ?>
