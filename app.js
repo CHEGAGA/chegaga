@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   initNavbar();
   initMobileMenu();
   initHeroSlider();
@@ -378,6 +378,66 @@ function initGalleryLightbox() {
    7. BLOG ARTICLES & SEARCH
    ========================================== */
 const blogArticles = [
+  {
+    id: "guide-complet-erg-chegaga",
+    title: "Erg Chegaga : Guide complet pour explorer le grand erg du Sud Marocain",
+    tag: "Guide Complet",
+    date: "Oct 2026",
+    image: "images/guide-complet-erg-chegaga.jpg",
+    snippet: "Accès en 4x4, nuit en bivouac de luxe, méharée, meilleure saison et conseils nomades : tout ce qu'il faut savoir pour vivre l'aventure ultime au cœur des plus hautes dunes du Sahara marocain.",
+    content: `
+      <p class="mb-4">Perdu au cœur du Sahara marocain, bien au-delà des routes goudronnées et de l'agitation moderne, <strong>l'Erg Chegaga</strong> (ou Chigaga) s'impose comme le joyau le plus vaste, le plus sauvage et le plus spectaculaire du Maroc. S'étendant sur plus de 40 kilomètres avec des crêtes dorées culminant à près de 300 mètres de hauteur, ce géant de sable offre une immersion nomade d'une pureté incomparable.</p>
+      
+      <h4 class="text-xl font-bold text-desert-stone mb-2 mt-6">1. Qu'est-ce que l'Erg Chegaga ? Une Immensité Intacte</h4>
+      <p class="mb-4">Situé dans la province de Zagora, dans la région Drâa-Tafilalet, l'Erg Chegaga borde les frontières naturelles du Grand Sud et le célèbre <strong>Parc National d'Iriqui</strong>. Contrairement à d'autres zones désertiques accessibles en bord de route, Chegaga est un sanctuaire naturel préservé : pour l'atteindre, il faut traverser 60 kilomètres de désert sauvage hors-piste. Ici, pas de constructions en béton, pas de pylônes électriques, seulement l'océan de sable doré et le silence majestueux du Sahara.</p>
+
+      <h4 class="text-xl font-bold text-desert-stone mb-2 mt-6">2. Comment se rendre à Erg Chegaga ? Pistes & Logistique 4x4</h4>
+      <p class="mb-4">L'accès à Erg Chegaga exige obligatoirement un <strong>véhicule tout-terrain 4x4 robuste</strong> et un chauffeur-guide natif du désert connaissant les subtilités du terrain (bancs de fesh-fesh, passages rocailleux du reg et crêtes dunaires). Une voiture de tourisme classique ne peut pas s'y aventurer.</p>
+      <ul class="list-disc pl-5 mb-4 space-y-2 text-desert-stone/85">
+        <li><strong>Depuis M'Hamid El Ghizlane :</strong> C'est la porte d'entrée la plus proche. Après la fin du goudron, comptez environ 2h30 à 3 heures d'aventure 4x4 le long de l'Oued Drâa asséché et des plateaux d'acacias.</li>
+        <li><strong>Depuis Zagora ou Ouarzazate :</strong> Des départs quotidiens permettent de traverser la sublime vallée du Drâa et ses kasbahs historiques avant de plonger dans le hors-piste.</li>
+        <li><strong>Depuis Marrakech :</strong> Un circuit de 3 à 4 jours permet de franchir le Haut-Atlas via le col du Tizi n'Tichka, de visiter la célèbre Kasbah d'Aït Ben Haddou, puis de rejoindre les dunes de Chegaga via Zagora ou Foum Zguid et le lit asséché du Lac Iriki.</li>
+      </ul>
+
+      <h4 class="text-xl font-bold text-desert-stone mb-2 mt-6">3. L'Hébergement : Magie du Bivouac de Luxe au Pied des Dunes</h4>
+      <p class="mb-4">Dormir à Erg Chegaga ne signifie pas renoncer au confort. Notre <strong>Bivouac de Luxe</strong> combine l'authenticité de l'hospitalité nomade et le raffinement moderne :</p>
+      <ul class="list-disc pl-5 mb-4 space-y-2 text-desert-stone/85">
+        <li><strong>Tentes caïdales royales :</strong> Lits king-size douillets, tapis berbères en laine tissée à la main et mobilier artisanal en fer forgé et bois noble.</li>
+        <li><strong>Sanitaires privatifs complets :</strong> Vraie salle de bain attenante dans chaque tente, avec douche chaude à pression, lavabo traditionnel et toilettes écologiques.</li>
+        <li><strong>Énergie solaire 100% propre :</strong> Éclairage chaleureux et prises électriques pour recharger vos téléphones et appareils photo.</li>
+        <li><strong>Dîner gastronomique sous les étoiles :</strong> Tajines savoureux cuisinés avec des produits frais du terroir, soupe harira, couscous royal et le fameux pain du sable (Taguella) cuit sous les braises.</li>
+      </ul>
+
+      <h4 class="text-xl font-bold text-desert-stone mb-2 mt-6">4. Les Activités Incontournables au Désert</h4>
+      <p class="mb-4">Une expédition à Erg Chegaga est une invitation à l'émerveillement et à l'aventure :</p>
+      <ul class="list-disc pl-5 mb-4 space-y-2 text-desert-stone/85">
+        <li><strong>La Méharée en dromadaire :</strong> Gravir les crêtes au rythme lent et apaisant de la caravane pour admirer le coucher de soleil transformant le sable en or liquide.</li>
+        <li><strong>Le Sandboarding :</strong> Chausser une planche adaptée pour dévaler des pentes de plus de 200 mètres de haut. Une sensation de glisse unique et sans danger !</li>
+        <li><strong>Quad & Buggy dans les dunes :</strong> Pour les amateurs d'adrénaline, des raids encadrés permettent de sillonner les grands espaces à pleine puissance.</li>
+        <li><strong>Observation astronomique :</strong> Avec zéro pollution lumineuse (ciel Bortle 1), la Voie Lactée apparaît avec une netteté foudroyante.</li>
+        <li><strong>Veillée musicale au feu de camp :</strong> Partager le thé à la menthe avec nos guides au son des tambours sahariens et des chants traditionnels nomades.</li>
+      </ul>
+
+      <h4 class="text-xl font-bold text-desert-stone mb-2 mt-6">5. Quelle est la Meilleure Période pour Visiter ?</h4>
+      <p class="mb-4">La saison idéale s'étend d'<strong>octobre à mai</strong>. Durant ces mois, les journées sont agréablement chaudes et ensoleillées (22°C à 28°C), idéales pour les excursions. Les nuits d'hiver (décembre à février) sont fraîches à froides, d'où l'importance de nos tentes équipées de couettes épaisses en duvet.</p>
+
+      <div class="mt-8 p-6 bg-desert-sand/30 rounded-2xl border border-desert-sand/70 space-y-3">
+        <h5 class="font-heading font-extrabold text-lg text-desert-stone">Prêt à Explorer le Grand Erg Chegaga ?</h5>
+        <p class="text-xs sm:text-sm text-desert-stone/80">Nos guides nomades locaux organisent votre circuit privé sur mesure avec prise en charge directe, 4x4 tout confort et hébergement en camp de luxe.</p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="tours.html" class="px-5 py-2.5 bg-desert-terracotta hover:bg-desert-ochre text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors">
+            Voir Nos Circuits 4x4
+          </a>
+          <a href="camp.html" class="px-5 py-2.5 bg-desert-stone hover:bg-desert-terracotta text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors">
+            Découvrir le Bivouac de Luxe
+          </a>
+          <a href="https://wa.me/212615396800?text=Bonjour%20!%20J'ai%20lu%20votre%20Guide%20Complet%20Erg%20Chegaga%20et%20je%20souhaite%20r%C3%A9server." target="_blank" class="px-5 py-2.5 bg-desert-whatsapp hover:bg-green-600 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors flex items-center gap-1.5">
+            <i class="fab fa-whatsapp"></i> Réserver sur WhatsApp
+          </a>
+        </div>
+      </div>
+    `
+  },
   {
     id: "chegaga-vs-chebbi",
     title: "Erg Chegaga vs Erg Chebbi : Pourquoi Chegaga est le Véritable Désert Marocain",

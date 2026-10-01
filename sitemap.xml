@@ -61,9 +61,13 @@
   </url>
   <url>
     <loc>https://ergchegaga.com/blog.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://ergchegaga.com/images/guide-complet-erg-chegaga.jpg</image:loc>
+      <image:title>Guide complet pour explorer le grand erg Chegaga Maroc</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://ergchegaga.com/contact.html</loc>
