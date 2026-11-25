@@ -158,7 +158,7 @@ const activitiesData = {
     image: "images/trek-caravan-dunes.jpg",
     badge: "Le Plus Authentique",
     duration: "1h30 - 2 Heures",
-    price: "25 € / 270 MAD",
+    price: "Sur Demande",
     highlights: ["Chèche nomade traditionnel offert", "Ascension de la grande crête pour le coucher du soleil", "Cérémonie du thé au sommet des dunes", "Guide chamelier saharien professionnel"],
     desc: "Embarquez pour un voyage saharien emblématique au rythme apaisant des dromadaires à travers les vagues dorées d'Erg Chegaga. Ressentez ce que vivaient les caravanes nomades depuis des millénaires lorsque le soleil couchant transforme le sable doré en un océan pourpre flamboyant."
   },
@@ -167,7 +167,7 @@ const activitiesData = {
     image: "images/tour-lake-iriqui.jpg",
     badge: "Adrénaline & Grands Espaces",
     duration: "Demi-journée ou Journée complète",
-    price: "85 € / 900 MAD",
+    price: "Sur Demande",
     highlights: ["Traversée des mythiques pistes du Paris-Dakar", "Traversée sauvage de l'ancien lac asséché d'Iriki", "Visite des gisements de fossiles millénaires", "Chauffeurs-guides experts du désert"],
     desc: "Domptez l'immensité sauvage entre M'hamid, le lac Iriki et les dunes d'Erg Chegaga à bord de nos véhicules 4x4 tout-terrain. Traversez les plateaux d'acacias, les fonds marins préhistoriques fossilisés et des crêtes de dunes spectaculaires à couper le souffle."
   },
@@ -176,7 +176,7 @@ const activitiesData = {
     image: "images/activity-quad-rider.jpg",
     badge: "Aventure & Sensations",
     duration: "1 à 3 Heures",
-    price: "50 € / 550 MAD",
+    price: "Sur Demande",
     highlights: ["Quads Yamaha & Polaris haut de gamme", "Équipement de sécurité complet fourni", "Parcours guidé à travers les crêtes sablonneuses", "Arrêts photos & vidéos panoramiques"],
     desc: "Faites monter l'adrénaline aux commandes de votre quad à travers les étendues infinies du Sahara. Des pistes rapides aux grandes pentes de sable fin, cette aventure dynamique est adaptée aussi bien aux débutants qu'aux pilotes chevronnés."
   },
@@ -185,7 +185,7 @@ const activitiesData = {
     image: "images/sandboarding-dunes.jpg",
     badge: "Plaisir & Glisse Pure",
     duration: "Illimité durant le séjour",
-    price: "Inclus avec le Bivouac / 10 €",
+    price: "Inclus avec le Bivouac / Sur Demande",
     highlights: ["Planches spécialement fartées pour le sable", "Adapté à tous les âges et niveaux", "Panoramas exceptionnels au sommet", "Photos et vidéos d'action mémorables"],
     desc: "Prenez votre planche de sandboard et glissez sur les plus hautes dunes naturelles du Maroc. Debout comme sur un snowboard ou assis, Erg Chegaga offre des descentes jusqu'à 300 mètres de hauteur pour des sensations inoubliables."
   },
@@ -246,7 +246,7 @@ function initActivitiesModals() {
         }
 
         if (modalWaBtn) {
-          const waMsg = encodeURIComponent(`Bonjour ! Je souhaite réserver ou obtenir des informations sur l'activité : ${data.title} (${data.price}) à Erg Chegaga.`);
+          const waMsg = encodeURIComponent(`Bonjour ! Je souhaite obtenir un devis et réserver l'activité : ${data.title} à Erg Chegaga.`);
           modalWaBtn.href = `https://wa.me/212615396800?text=${waMsg}`;
         }
 
