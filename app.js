@@ -379,6 +379,49 @@ function initGalleryLightbox() {
    ========================================== */
 const blogArticles = [
   {
+    id: "traversee-du-lac-iriki-en-4x4-sur-les-traces-du-mythique-par",
+    title: "Traversée du Lac Iriki en 4x4 : Sur les Traces du Mythique Paris‑Dakar",
+    tag: "Aventure 4x4",
+    date: "Nov 2026",
+    image: "images/activity-4x4.jpg",
+    snippet: "Explorez le Lac Iriki, cœur battant du Sahara, à travers une traversée 4x4 palpitante, où légende et désert se rencontrent pour une expérience authentiquement nomade.",
+    content: `
+<p class="mb-4">Le <strong>Lac Iriki</strong> s'étend comme un miroir d’azur au cœur du grand erg du Sud marocain, entouré de dunes à perte de vue. En traversant ce joyau d’eau salée en 4x4, vous vous glissez dans l’esprit du légendaire Paris‑Dakar, où chaque kilomètre est une promesse d’aventure et de découverte.</p>
+<h4>1. Le désert, un terrain de jeu sans compromis</h4>
+<p class="mb-4">Contrairement aux zones commerciales comme Merzouga, l’erg Chegaga reste intact, 100 % sauvage, sans pylônes ni béton. Seul le 4x4 vous permet d’atteindre le Lac Iriki, garantissant une expérience pure et sans distorsion.</p>
+<h4>2. Le parcours, un ballet de sable et d’eau</h4>
+<p class="mb-4">La traversée commence sur le sentier de dunes, où le vent façonne des formes mouvantes. Vous traverserez ensuite l’étendue salée du lac, où la lumière se reflète sur les eaux, créant un spectacle naturel inoubliable.</p>
+<ul class="list-disc pl-5 mb-4 space-y-2 text-desert-stone/85">
+<li><strong>Distance :</strong> 60 km de dunes, 20 km de traversée lacustre.</li>
+<li><strong>Temps :</strong> 4 h de conduite, 2 h d’exploration.</li>
+<li><strong>Équipement :</strong> Jeep 4x4 robuste, eau, fournitures, casque.</li>
+<li><strong>Points forts :</strong> vue panoramique du lac, ciels étoilés, silence majestueux.</li>
+</ul>
+<h4>3. Le cadre, un retour à l’âme nomade</h4>
+<p class="mb-4">Au cœur du désert, vous pourrez s’échapper du tumulte urbain. Le soir, un feu de camp vous invite à savourer du thé à la menthe, à écouter les histoires des guides locaux et à contempler la nuit étoilée.</p>
+<h4>4. L’équipe, votre guide vers l’inconnu</h4>
+<p class="mb-4">Nos guides experts vous accompagnent, partageant leurs connaissances du terrain, des sentiers et de la faune. Chaque parcours est personnalisé, adapté à votre niveau et à vos envies.</p>
+<h4>5. Réservez votre aventure personnalisée</h4>
+<p class="mb-4">Les tarifs sont personnalisés et disponibles sur demande. Contactez notre équipe via WhatsApp pour planifier votre traversée du Lac Iriki et vivre une expérience unique au cœur du Sahara.</p>
+      <div class="mt-8 p-6 bg-desert-sand/30 rounded-2xl border border-desert-sand/70 space-y-3">
+        <h5 class="font-heading font-extrabold text-lg text-desert-stone">Envie de Vivre l'Expérience d'Erg Chegaga ?</h5>
+        <p class="text-xs sm:text-sm text-desert-stone/80">Nos guides nomades locaux organisent votre aventure sur-mesure au départ de M'hamid, Zagora, Ouarzazate ou Marrakech. Bivouac de luxe, méharée et traversée 4x4.</p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="tours.html" class="px-5 py-2.5 bg-desert-terracotta hover:bg-desert-ochre text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors">
+            Voir Nos Circuits 4x4
+          </a>
+          <a href="camp.html" class="px-5 py-2.5 bg-desert-stone hover:bg-desert-terracotta text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors">
+            Découvrir le Bivouac
+          </a>
+          <a href="https://wa.me/212615396800?text=Bonjour%20!%20J'ai%20lu%20votre%20article%20'Traversée du Lac Iriki en 4x4 : Sur les Traces du Mythique Paris‑Dakar'%20et%20je%20souhaite%20obtenir%20un%20devis." target="_blank" class="px-5 py-2.5 bg-desert-whatsapp hover:bg-green-600 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors flex items-center gap-1.5">
+            <i class="fab fa-whatsapp"></i> Réserver sur WhatsApp
+          </a>
+        </div>
+      </div>
+
+    `
+  },
+  {
     id: "bivouac-de-luxe-a-erg-chegaga-confort-moderne-au-c-ur-des-du",
     title: "Bivouac de Luxe à Erg Chegaga : Confort Moderne au Cœur des Dunes Sauvages",
     tag: "Bivouac de Luxe",
