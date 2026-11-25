@@ -1,8 +1,25 @@
 User-agent: *
 Allow: /
-
-# Prevent indexing of backend form processor
 Disallow: /contact.php
 
-# Sitemap location
+# Explicitly allow AI Search Engines & Generative Crawlers (GEO / AEO)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap & LLM Discovery
 Sitemap: https://ergchegaga.com/sitemap.xml
