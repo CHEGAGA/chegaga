@@ -379,6 +379,60 @@ function initGalleryLightbox() {
    ========================================== */
 const blogArticles = [
   {
+    id: "bivouac-de-luxe-a-erg-chegaga-confort-moderne-au-c-ur-des-du",
+    title: "Bivouac de Luxe à Erg Chegaga : Confort Moderne au Cœur des Dunes Sauvages",
+    tag: "Bivouac de Luxe",
+    date: "Nov 2026",
+    image: "images/camp-breakfast.jpg",
+    snippet: "Plongez dans le désert de M'hamid El Ghizlane avec un bivouac haut de gamme au cœur d’Erg Chegaga. Expérience unique, 100% sauvage, sans pylônes ni béton.",
+    content: `
+<p class="mb-4">Le <strong>désert</strong> s’étend à perte de vue, mais au cœur de ses 300 mètres de dunes, un <strong>bivouac de luxe</strong> vous attend. Entre <strong>silence majestueux</strong> et <strong>thé au coin du feu</strong>, Erg Chegaga offre une immersion authentique, loin des sentiers commercialisés de Merzouga.</p>
+<h4>1. Pourquoi Erg Chegaga, le joyau sauvage du Sahara</h4>
+<p class="mb-4">Contrairement aux zones aménagées, Erg Chegaga est resté 100 % naturel. Aucun pylône, aucun béton, aucun éclairage artificiel ne perturbe le paysage. Accessible uniquement en 4x4, il garantit une expérience de découverte sans compromis, un véritable retour à l’âme nomade.</p>
+<ul class="list-disc pl-5 mb-4 space-y-2 text-desert-stone/85">
+<li>Des dunes sculptées par le vent, sans trace de modernité.</li>
+<li>Une vue imprenable sur l’horizon, idéale pour l’observation des étoiles.</li>
+<li>Un environnement préservé, propice aux rencontres culturelles avec les Touaregs.</li>
+</ul>
+<h4>2. Confort moderne sans compromis sur l’authenticité</h4>
+<p class="mb-4">Votre hébergement se compose de tentes de safari ultra‑confortables : tissu respirant, plancher en bois naturel et chaises ergonomiques. Chaque tente est équipée :</p>
+<ul class="list-disc pl-5 mb-4 space-y-2 text-desert-stone/85">
+<li>Un lit king‑size, linge de maison doux.</li>
+<li>Une cuisine équipée avec eau chaude et cafetière.</li>
+<li>Un espace lounge avec hamacs et chaises longues.</li>
+<li>Des éclairages LED doux, sans perturber la nuit étoilée.</li>
+</ul>
+<h4>3. Une expérience sensorielle à chaque instant</h4>
+<p class="mb-4">Le soir, le <strong>feu de camp</strong> devient le cœur battant du bivouac. Les parfumés <strong>thés à la menthe</strong> et les histoires racontées par les guides locaux créent une atmosphère chaleureuse. Le matin, le <strong>lever du soleil</strong> sur les dunes offre des couleurs que seul le désert peut offrir.</p>
+<h4>4. Activités uniques dans le désert</h4>
+<p class="mb-4">Au-delà du bivouac, plusieurs activités enrichissent votre séjour :</p>
+<ul class="list-disc pl-5 mb-4 space-y-2 text-desert-stone/85">
+<li>Des balades à dos de chameau au crépuscule.</li>
+<li>Des sessions de <strong>photographie de nuit</strong> pour capturer les étoiles.</li>
+<li>Des ateliers de <strong>tissage</strong> et de <strong>couture</strong> avec des artisans locaux.</li>
+<li>Des cours de <strong>astronomie</strong> guidés par des experts.</li>
+</ul>
+<h4>5. Réservation personnalisée et contact</h4>
+<p class="mb-4">Les tarifs varient selon la durée, le type de tente et les activités choisies. <strong>Sur demande</strong>, l’équipe de Erg Chegaga prépare un devis sur mesure. Vous pouvez les joindre directement via WhatsApp pour obtenir plus d’informations et réserver votre aventure.</p>
+      <div class="mt-8 p-6 bg-desert-sand/30 rounded-2xl border border-desert-sand/70 space-y-3">
+        <h5 class="font-heading font-extrabold text-lg text-desert-stone">Envie de Vivre l'Expérience d'Erg Chegaga ?</h5>
+        <p class="text-xs sm:text-sm text-desert-stone/80">Nos guides nomades locaux organisent votre aventure sur-mesure au départ de M'hamid, Zagora, Ouarzazate ou Marrakech. Bivouac de luxe, méharée et traversée 4x4.</p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="tours.html" class="px-5 py-2.5 bg-desert-terracotta hover:bg-desert-ochre text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors">
+            Voir Nos Circuits 4x4
+          </a>
+          <a href="camp.html" class="px-5 py-2.5 bg-desert-stone hover:bg-desert-terracotta text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors">
+            Découvrir le Bivouac
+          </a>
+          <a href="https://wa.me/212615396800?text=Bonjour%20!%20J'ai%20lu%20votre%20article%20'Bivouac de Luxe à Erg Chegaga : Confort Moderne au Cœur des Dunes Sauvages'%20et%20je%20souhaite%20obtenir%20un%20devis." target="_blank" class="px-5 py-2.5 bg-desert-whatsapp hover:bg-green-600 text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors flex items-center gap-1.5">
+            <i class="fab fa-whatsapp"></i> Réserver sur WhatsApp
+          </a>
+        </div>
+      </div>
+
+    `
+  },
+  {
     id: "guide-complet-erg-chegaga",
     title: "Erg Chegaga : Guide complet pour explorer le grand erg du Sud Marocain",
     tag: "Guide Complet",

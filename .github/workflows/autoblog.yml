@@ -1,0 +1,44 @@
+name: Automated Erg Chegaga SEO Auto-Blog
+
+on:
+  schedule:
+    # Runs every 2 days at 08:00 UTC (10:00 Moroccan time)
+    - cron: '0 8 */2 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  models: read
+
+jobs:
+  publish-article:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate & Publish SEO Blog Post
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/autoblog.py
+
+      - name: Commit & Push Changes to Repository
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add app.js blog.html topics.txt used_topics.txt used_images.json sitemap.xml
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-Blog: Publish new SEO article [skip ci]" && git push origin main)
